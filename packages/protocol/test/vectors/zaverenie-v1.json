@@ -1,0 +1,39 @@
+{
+  "comment": "Векторы contracts/zaverenie-v1.md фичи 006. Ключ станции — Ed25519 из семени SHA-256(\"zaverenie-v1\"); содержимое файла — один байт «v» (синтетическое, принцип VII).",
+  "seedHex": "2799694ce0f0ce4f332388e4779f413a36f840257bff921319f955e5cfad0f0b",
+  "contentUtf8": "v",
+  "attestation": {
+    "format": "aristotel/zaverenie/v1",
+    "material": "01900000-0000-7000-8000-000000000001",
+    "owner": { "case": "01900000-0000-7000-8000-0000000000c1" },
+    "sha256": "4c94485e0c21ae6c41ce1dfe7b6bfaceea5ab68e40a2476f50208e526f506080",
+    "size": "1",
+    "station": "01900000-0000-7000-8000-000000000051",
+    "stationKey": "cYUHwWFnKlvA4on3cKWq5aAXv1h83CRFoCcNkh2TvLM",
+    "at": "2026-10-20T09:00:00.000Z",
+    "signature": "tfZfIUl8GOBTfO6yCXelo2TheEhiunuAJXHy1wifrdYnzlwhtqejoNfxFytzNxGew6LhwO8eMhCU8EoRv5VGCw"
+  },
+  "messageSha256": "ea0c85a38504dd2a40225ad30f75e366e60b4035bde9f1760909ff0006883f44",
+  "invalid": [
+    { "name": "лишнее поле kind", "set": { "kind": "image" } },
+    { "name": "способ снятия", "set": { "acquisitionMethod": "x" } },
+    { "name": "средство снятия", "set": { "acquisitionTool": "x" } },
+    { "name": "Член Группы", "set": { "member": "x" } },
+    { "name": "size с ведущим нулём", "set": { "size": "01" } },
+    { "name": "size числом", "set": { "size": 1 } },
+    { "name": "sha256 в верхнем регистре", "set": { "sha256": "4C94485E0C21AE6C41CE1DFE7B6BFACEEA5AB68E40A2476F50208E526F506080" } },
+    { "name": "owner с обоими ключами", "set": { "owner": { "case": "01900000-0000-7000-8000-0000000000c1", "document": "01900000-0000-7000-8000-0000000000d1" } } },
+    { "name": "owner без ключей", "set": { "owner": {} } },
+    { "name": "at без миллисекунд", "set": { "at": "2026-10-20T09:00:00Z" } },
+    { "name": "другой формат", "set": { "format": "aristotel/zaverenie/v2" } },
+    { "name": "ключ не той длины", "set": { "stationKey": "cYUHwWFnKlvA4on3cKWq5aAXv1h83CRFoCcNkh2T" } },
+    { "name": "нет подписи", "remove": ["signature"] }
+  ],
+  "badSignature": [
+    { "name": "изменён size", "set": { "size": "2" } },
+    { "name": "изменён sha256", "set": { "sha256": "0000000000000000000000000000000000000000000000000000000000000000" } },
+    { "name": "изменён Кейс", "set": { "owner": { "case": "01900000-0000-7000-8000-0000000000c2" } } },
+    { "name": "Кейс записан как Документ", "set": { "owner": { "document": "01900000-0000-7000-8000-0000000000c1" } } },
+    { "name": "изменено время", "set": { "at": "2026-10-20T09:00:00.001Z" } }
+  ]
+}

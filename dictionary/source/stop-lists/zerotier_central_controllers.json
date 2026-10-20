@@ -1,0 +1,117 @@
+{
+  "format": "aristotel/stop-list/v1",
+  "code": "zerotier_central_controllers",
+  "label": "Контроллеры ZeroTier Central",
+  "source": "нет, правится вручную",
+  "builtAt": "2026-10-13",
+  "rows": [
+    {
+      "type": "zerotier_node",
+      "kind": "value",
+      "value": "8056c2e21c",
+      "note": "контроллер ZeroTier Central; контроллер публичной сети Earth и сетей Central 2014–2019"
+    },
+    {
+      "type": "zerotier_node",
+      "kind": "value",
+      "value": "ea3e27ea7c",
+      "note": "контроллер ZeroTier Central; новый контроллер Central, 2023, сообщение сотрудников ZeroTier"
+    },
+    {
+      "type": "zerotier_node",
+      "kind": "value",
+      "value": "e5cd7a9e1c",
+      "note": "контроллер ZeroTier Central; контроллер Central по форуму, 2022; 3 автора"
+    },
+    {
+      "type": "zerotier_node",
+      "kind": "value",
+      "value": "d3ecf5726d",
+      "note": "контроллер ZeroTier Central; контроллер Central по форуму, 2022"
+    },
+    {
+      "type": "zerotier_node",
+      "kind": "value",
+      "value": "83048a0632",
+      "note": "контроллер ZeroTier Central; вызов API my.zerotier.com; 5 авторов, 2019–2026"
+    },
+    {
+      "type": "zerotier_node",
+      "kind": "value",
+      "value": "17d709436c",
+      "note": "контроллер ZeroTier Central; адрес my.zerotier.com; 3 автора, 2017–2024"
+    },
+    {
+      "type": "zerotier_node",
+      "kind": "value",
+      "value": "8850338390",
+      "note": "контроллер ZeroTier Central; вызов API my.zerotier.com; 3 автора, 2018–2023"
+    },
+    {
+      "type": "zerotier_node",
+      "kind": "value",
+      "value": "6ab565387a",
+      "note": "контроллер ZeroTier Central; вызов API my.zerotier.com; 2 автора, 2020–2021"
+    },
+    {
+      "type": "zerotier_node",
+      "kind": "value",
+      "value": "93afae5963",
+      "note": "контроллер ZeroTier Central; 4 автора, 2017–2025"
+    },
+    {
+      "type": "zerotier_node",
+      "kind": "value",
+      "value": "b6079f73c6",
+      "note": "контроллер ZeroTier Central; 3 автора в разных проектах"
+    },
+    {
+      "type": "zerotier_node",
+      "kind": "value",
+      "value": "35c192ce9b",
+      "note": "контроллер ZeroTier Central; 2 автора, 2025–2026"
+    },
+    {
+      "type": "zerotier_node",
+      "kind": "value",
+      "value": "a84ac5c10a",
+      "note": "контроллер ZeroTier Central; 2 автора, 2021–2022"
+    },
+    {
+      "type": "zerotier_node",
+      "kind": "value",
+      "value": "8bd5124fd6",
+      "note": "контроллер ZeroTier Central; 2 автора, 2018"
+    },
+    {
+      "type": "zerotier_node",
+      "kind": "value",
+      "value": "a09acf0233",
+      "note": "контроллер ZeroTier Central; 2 автора, 2018–2026"
+    },
+    {
+      "type": "zerotier_node",
+      "kind": "value",
+      "value": "a0cbf4b62a",
+      "note": "контроллер ZeroTier Central; 2 автора, 2022"
+    },
+    {
+      "type": "zerotier_node",
+      "kind": "value",
+      "value": "ebe7fbd445",
+      "note": "контроллер ZeroTier Central; 2 автора, 2023"
+    },
+    {
+      "type": "zerotier_node",
+      "kind": "value",
+      "value": "1c33c1ced0",
+      "note": "контроллер ZeroTier Central; запрос сети к API my.zerotier.com, 2018; ответ 404"
+    },
+    {
+      "type": "zerotier_node",
+      "kind": "value",
+      "value": "9f77fc393e",
+      "note": "контроллер ZeroTier Central; запрос сети к API my.zerotier.com, 2018; ответа нет"
+    }
+  ]
+}

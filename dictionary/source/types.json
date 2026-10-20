@@ -1,0 +1,1721 @@
+{
+  "objectTypes": [
+    {
+      "code": "platform",
+      "label": "Платформа/ОС",
+      "role": "part",
+      "identifying": []
+    },
+    {
+      "code": "crypto",
+      "label": "Крипто/Шифрование",
+      "role": "part",
+      "identifying": []
+    },
+    {
+      "code": "event",
+      "label": "Событие",
+      "role": "part",
+      "identifying": []
+    },
+    {
+      "code": "flight_profile",
+      "label": "Полётный профиль",
+      "role": "part",
+      "identifying": []
+    },
+    {
+      "code": "operator",
+      "label": "Оператор",
+      "role": "node",
+      "identifying": [
+        "username",
+        "callsign"
+      ]
+    },
+    {
+      "code": "build_station",
+      "label": "Станция сборки",
+      "role": "node",
+      "identifying": [
+        "win_volume_guid",
+        "build_host",
+        "indexer_volume_guid"
+      ]
+    },
+    {
+      "code": "key",
+      "label": "Ключ",
+      "role": "node",
+      "identifying": [
+        "ssh_fingerprint",
+        "ssh_fingerprint_md5",
+        "x509_fingerprint",
+        "wireguard_pubkey",
+        "pairing_key_sha256"
+      ]
+    },
+    {
+      "code": "infra_node",
+      "label": "Инфраструктурный узел",
+      "role": "node",
+      "identifying": [
+        "domain",
+        "ip",
+        "zerotier_node",
+        "zerotier_network"
+      ]
+    },
+    {
+      "code": "radio_channel",
+      "label": "Радио/Канал связи",
+      "role": "node",
+      "identifying": [
+        "wfb_link_id",
+        "radio_network_id",
+        "ssid"
+      ]
+    },
+    {
+      "code": "software",
+      "label": "ПО/Компонент",
+      "role": "node",
+      "identifying": [
+        "software_name",
+        "software_version"
+      ]
+    },
+    {
+      "code": "geo_object",
+      "label": "Гео-объект",
+      "role": "node",
+      "identifying": [
+        "terrain_tile"
+      ]
+    },
+    {
+      "code": "hw_element",
+      "label": "Аппаратный элемент",
+      "role": "node",
+      "identifying": [
+        "sd_cid",
+        "mcu_uid",
+        "mac",
+        "imei",
+        "iccid",
+        "serial"
+      ]
+    },
+    {
+      "code": "artifact",
+      "label": "Артефакт",
+      "role": "node",
+      "identifying": [
+        "file_sha256"
+      ]
+    }
+  ],
+  "linkTypes": [
+    {
+      "code": "built_on",
+      "label": "собрано_на",
+      "from": [
+        "@item"
+      ],
+      "to": [
+        "build_station"
+      ],
+      "directed": true
+    },
+    {
+      "code": "authored_by",
+      "label": "авторства",
+      "from": [
+        "@item",
+        "flight_profile"
+      ],
+      "to": [
+        "operator"
+      ],
+      "directed": true
+    },
+    {
+      "code": "uses_key",
+      "label": "использует_ключ",
+      "from": [
+        "@item"
+      ],
+      "to": [
+        "key"
+      ],
+      "directed": true
+    },
+    {
+      "code": "controlled_via",
+      "label": "управляется_через",
+      "from": [
+        "@item"
+      ],
+      "to": [
+        "infra_node"
+      ],
+      "directed": true
+    },
+    {
+      "code": "contains_software",
+      "label": "содержит_ПО",
+      "from": [
+        "@item"
+      ],
+      "to": [
+        "software"
+      ],
+      "directed": true
+    },
+    {
+      "code": "same_batch",
+      "label": "та_же_партия",
+      "from": [
+        "@item"
+      ],
+      "to": [
+        "@item"
+      ],
+      "directed": false
+    },
+    {
+      "code": "twin",
+      "label": "близнец",
+      "from": [
+        "@item"
+      ],
+      "to": [
+        "@item"
+      ],
+      "directed": false
+    },
+    {
+      "code": "has_profile",
+      "label": "связан_с_профилем",
+      "from": [
+        "@item"
+      ],
+      "to": [
+        "flight_profile"
+      ],
+      "directed": true
+    },
+    {
+      "code": "operates_in",
+      "label": "действует_в",
+      "from": [
+        "@item",
+        "flight_profile"
+      ],
+      "to": [
+        "geo_object"
+      ],
+      "directed": true
+    },
+    {
+      "code": "supported_by",
+      "label": "подтверждается",
+      "from": [
+        "@link"
+      ],
+      "to": [
+        "artifact",
+        "@material"
+      ],
+      "directed": true
+    },
+    {
+      "code": "identical",
+      "label": "тождественен",
+      "from": [
+        "@record"
+      ],
+      "to": [
+        "@record"
+      ],
+      "directed": false
+    },
+    {
+      "code": "has_element",
+      "label": "содержит_элемент",
+      "from": [
+        "@item"
+      ],
+      "to": [
+        "hw_element"
+      ],
+      "directed": true
+    },
+    {
+      "code": "links_via",
+      "label": "связь_по",
+      "from": [
+        "@item"
+      ],
+      "to": [
+        "radio_channel"
+      ],
+      "directed": true
+    },
+    {
+      "code": "contains_file",
+      "label": "содержит_файл",
+      "from": [
+        "@item",
+        "hw_element"
+      ],
+      "to": [
+        "artifact"
+      ],
+      "directed": true
+    },
+    {
+      "code": "connected_to",
+      "label": "соединено_с",
+      "from": [
+        "@item"
+      ],
+      "to": [
+        "@item"
+      ],
+      "directed": false
+    },
+    {
+      "code": "involves",
+      "label": "касается",
+      "from": [
+        "event"
+      ],
+      "to": [
+        "@node"
+      ],
+      "directed": true
+    },
+    {
+      "code": "same_airframe",
+      "label": "один_борт",
+      "from": [
+        "@item"
+      ],
+      "to": [
+        "@item"
+      ],
+      "directed": false
+    },
+    {
+      "code": "same_line",
+      "label": "та_же_линия",
+      "from": [
+        "@item"
+      ],
+      "to": [
+        "@item"
+      ],
+      "directed": false
+    }
+  ],
+  "indicatorTypes": [
+    {
+      "code": "hostname",
+      "label": "Имя хоста",
+      "object": "platform",
+      "format": "имя хоста",
+      "comparable": true,
+      "normClass": "имя-хоста",
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": [
+        "hostname",
+        "mdns_hostname",
+        "former_hostname (с примечанием «прежнее»)"
+      ]
+    },
+    {
+      "code": "machine_id",
+      "label": "machine-id",
+      "object": "platform",
+      "format": "hex:32",
+      "comparable": true,
+      "normClass": "hex",
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": [
+        "machine_id"
+      ]
+    },
+    {
+      "code": "os_distro",
+      "label": "Дистрибутив",
+      "object": "platform",
+      "format": "перечень:os_distro",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": [
+        "os_distro",
+        "os",
+        "os_release"
+      ]
+    },
+    {
+      "code": "os_version",
+      "label": "Версия ОС",
+      "object": "platform",
+      "format": "строка:64",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": []
+    },
+    {
+      "code": "kernel_version",
+      "label": "Версия ядра",
+      "object": "platform",
+      "format": "строка:96",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": [
+        "kernel_version",
+        "kernel"
+      ]
+    },
+    {
+      "code": "image_build",
+      "label": "Коммит pi-gen",
+      "object": "platform",
+      "format": "hex:40",
+      "comparable": true,
+      "normClass": "hex",
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": [
+        "pi_gen_commit"
+      ]
+    },
+    {
+      "code": "timezone",
+      "label": "Часовой пояс",
+      "object": "platform",
+      "format": "перечень:timezone",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": [
+        "timezone"
+      ]
+    },
+    {
+      "code": "keyboard",
+      "label": "Раскладка",
+      "object": "platform",
+      "format": "перечень:keyboard",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": [
+        "keyboard (operators.csv)"
+      ]
+    },
+    {
+      "code": "dt_overlay",
+      "label": "Оверлей Device Tree",
+      "object": "platform",
+      "format": "строка:64",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": [
+        "dtoverlay",
+        "cam_overlay"
+      ]
+    },
+    {
+      "code": "boot_param",
+      "label": "Параметр загрузки (config.txt, cmdline)",
+      "object": "platform",
+      "format": "параметр",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": []
+    },
+    {
+      "code": "bootloader",
+      "label": "Загрузчик, EEPROM",
+      "object": "platform",
+      "format": "строка:96",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": [
+        "bootloader",
+        "boot_order"
+      ]
+    },
+    {
+      "code": "secure_boot",
+      "label": "Защищённая загрузка",
+      "object": "platform",
+      "format": "перечень:secure_boot",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": [
+        "secure_boot"
+      ]
+    },
+    {
+      "code": "kernel_module",
+      "label": "Модуль ядра",
+      "object": "platform",
+      "format": "строка:64",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": [
+        "kernel_module"
+      ]
+    },
+    {
+      "code": "iface_address",
+      "label": "Адрес интерфейса",
+      "object": "platform",
+      "format": "ip-cidr",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": [
+        "static_ip",
+        "ipv4"
+      ]
+    },
+    {
+      "code": "username",
+      "label": "Учётная запись",
+      "object": "operator",
+      "format": "строка:64 без пробелов",
+      "comparable": true,
+      "normClass": "строка-без-регистра",
+      "identifying": "loose",
+      "autoSecret": false,
+      "legacyNames": [
+        "username",
+        "operator_user (devices.csv)"
+      ],
+      "crossCompare": [
+        "callsign"
+      ]
+    },
+    {
+      "code": "callsign",
+      "label": "Позывной, подпись",
+      "object": "operator",
+      "format": "строка:64",
+      "comparable": true,
+      "normClass": "строка-без-регистра",
+      "identifying": "loose",
+      "autoSecret": false,
+      "legacyNames": [
+        "callsign",
+        "operator_callsign",
+        "operator_signature"
+      ],
+      "crossCompare": [
+        "username"
+      ]
+    },
+    {
+      "code": "password_hash",
+      "label": "Хэш пароля",
+      "object": "operator",
+      "format": "строка:255 ($id$…)",
+      "comparable": true,
+      "normClass": "строка",
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": [
+        "password_hash"
+      ]
+    },
+    {
+      "code": "password_hash_type",
+      "label": "Тип хэша пароля",
+      "object": "operator",
+      "format": "перечень:password_hash_type",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": [
+        "password_hash_type (operators.csv)",
+        "empty_password (→ «пустой пароль»)"
+      ]
+    },
+    {
+      "code": "password",
+      "label": "Пароль (восстановленный)",
+      "object": "operator",
+      "format": "строка:255",
+      "comparable": false,
+      "normClass": "строка",
+      "identifying": "none",
+      "autoSecret": true,
+      "legacyNames": [
+        "password",
+        "password_plain"
+      ]
+    },
+    {
+      "code": "build_host",
+      "label": "Имя станции сборки",
+      "object": "build_station",
+      "format": "имя хоста",
+      "comparable": true,
+      "normClass": "имя-хоста",
+      "identifying": "loose",
+      "autoSecret": false,
+      "legacyNames": [
+        "build_host",
+        "operator_host (devices.csv)",
+        "build_host_path",
+        "build_mount"
+      ]
+    },
+    {
+      "code": "win_volume_guid",
+      "label": "GUID тома Windows",
+      "object": "build_station",
+      "format": "guid",
+      "comparable": true,
+      "normClass": "guid",
+      "identifying": "strict",
+      "autoSecret": false,
+      "legacyNames": [
+        "windows_volume_guid"
+      ]
+    },
+    {
+      "code": "indexer_volume_guid",
+      "label": "GUID индексатора тома Windows",
+      "object": "build_station",
+      "format": "guid",
+      "comparable": true,
+      "normClass": "guid",
+      "identifying": "loose",
+      "autoSecret": false,
+      "legacyNames": [
+        "indexer_guid"
+      ]
+    },
+    {
+      "code": "build_path",
+      "label": "Путь на станции сборки",
+      "object": "build_station",
+      "format": "строка:255",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": [
+        "build_path"
+      ]
+    },
+    {
+      "code": "ssh_fingerprint",
+      "label": "Отпечаток SSH-ключа (SHA-256)",
+      "object": "key",
+      "format": "ssh-ключ",
+      "comparable": true,
+      "normClass": "ssh-ключ",
+      "identifying": "strict",
+      "autoSecret": false,
+      "legacyNames": [
+        "ssh_fingerprint",
+        "ssh_host_fp",
+        "ssh_fp_sha256",
+        "fingerprint_sha256 (ssh_keys.csv)"
+      ]
+    },
+    {
+      "code": "ssh_fingerprint_md5",
+      "label": "Отпечаток SSH-ключа (MD5)",
+      "object": "key",
+      "format": "hex:32",
+      "comparable": true,
+      "normClass": "hex",
+      "identifying": "strict",
+      "autoSecret": false,
+      "legacyNames": []
+    },
+    {
+      "code": "key_kind",
+      "label": "Вид ключа",
+      "object": "key",
+      "format": "перечень:key_kind",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": []
+    },
+    {
+      "code": "key_algo",
+      "label": "Алгоритм",
+      "object": "key",
+      "format": "перечень:key_algo",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": [
+        "algo (ssh_keys.csv)"
+      ]
+    },
+    {
+      "code": "key_bits",
+      "label": "Длина, бит",
+      "object": "key",
+      "format": "целое",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": [
+        "bits (ssh_keys.csv)"
+      ]
+    },
+    {
+      "code": "key_comment",
+      "label": "Комментарий ключа",
+      "object": "key",
+      "format": "строка:255",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": [
+        "comment (ssh_keys.csv)"
+      ]
+    },
+    {
+      "code": "x509_fingerprint",
+      "label": "Отпечаток сертификата (SHA-256)",
+      "object": "key",
+      "format": "hex:64",
+      "comparable": true,
+      "normClass": "hex",
+      "identifying": "strict",
+      "autoSecret": false,
+      "legacyNames": []
+    },
+    {
+      "code": "x509_cn",
+      "label": "CN сертификата",
+      "object": "key",
+      "format": "строка:128",
+      "comparable": true,
+      "normClass": "строка-без-регистра",
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": [
+        "openvpn_cn"
+      ]
+    },
+    {
+      "code": "wireguard_pubkey",
+      "label": "Открытый ключ WireGuard",
+      "object": "key",
+      "format": "base64:44",
+      "comparable": true,
+      "normClass": "строка",
+      "identifying": "strict",
+      "autoSecret": false,
+      "legacyNames": []
+    },
+    {
+      "code": "pairing_key_sha256",
+      "label": "SHA-256 ключа сопряжения радиолинка",
+      "object": "key",
+      "format": "hex:64",
+      "comparable": true,
+      "normClass": "hex",
+      "identifying": "strict",
+      "autoSecret": false,
+      "legacyNames": []
+    },
+    {
+      "code": "node_kind",
+      "label": "Вид узла",
+      "object": "infra_node",
+      "format": "перечень:node_kind",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": [
+        "vpn",
+        "openvpn (вид)",
+        "zt_controller (вид)"
+      ]
+    },
+    {
+      "code": "domain",
+      "label": "Домен",
+      "object": "infra_node",
+      "format": "домен",
+      "comparable": true,
+      "normClass": "домен",
+      "identifying": "strict",
+      "autoSecret": false,
+      "legacyNames": [
+        "domain",
+        "c2_host",
+        "ddns_host",
+        "http_c2",
+        "https_api",
+        "tls_san"
+      ]
+    },
+    {
+      "code": "ip",
+      "label": "IP-адрес",
+      "object": "infra_node",
+      "format": "ip",
+      "comparable": true,
+      "normClass": "ip",
+      "identifying": "strict",
+      "autoSecret": false,
+      "legacyNames": [
+        "ip",
+        "origin_ip",
+        "openvpn",
+        "peer_ip",
+        "login_source"
+      ]
+    },
+    {
+      "code": "port",
+      "label": "Порт",
+      "object": "infra_node",
+      "format": "целое:1–65535",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": [
+        "ssh_port"
+      ]
+    },
+    {
+      "code": "url",
+      "label": "URL",
+      "object": "infra_node",
+      "format": "url",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": [
+        "url",
+        "c2_url",
+        "git_repo",
+        "web_ui"
+      ]
+    },
+    {
+      "code": "zerotier_network",
+      "label": "ID сети ZeroTier",
+      "object": "infra_node",
+      "format": "hex:16",
+      "comparable": true,
+      "normClass": "hex",
+      "identifying": "strict",
+      "autoSecret": false,
+      "legacyNames": [
+        "zerotier_nwid"
+      ]
+    },
+    {
+      "code": "zerotier_node",
+      "label": "ID узла ZeroTier",
+      "object": "infra_node",
+      "format": "hex:10",
+      "comparable": true,
+      "normClass": "hex",
+      "identifying": "strict",
+      "autoSecret": false,
+      "legacyNames": [
+        "zerotier_node",
+        "zerotier_id",
+        "zt_name",
+        "zerotier",
+        "zt_peer"
+      ]
+    },
+    {
+      "code": "asn",
+      "label": "Автономная система",
+      "object": "infra_node",
+      "format": "целое",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": [
+        "ip_asn"
+      ]
+    },
+    {
+      "code": "registrar",
+      "label": "Регистратор домена",
+      "object": "infra_node",
+      "format": "строка:128",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": [
+        "registrar"
+      ]
+    },
+    {
+      "code": "api_token",
+      "label": "API-ключ, токен",
+      "object": "infra_node",
+      "format": "строка:512",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": true,
+      "legacyNames": [
+        "api_key",
+        "leak_token"
+      ]
+    },
+    {
+      "code": "link_type",
+      "label": "Тип линка",
+      "object": "radio_channel",
+      "format": "перечень:link_type",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": []
+    },
+    {
+      "code": "radio_band",
+      "label": "Диапазон",
+      "object": "radio_channel",
+      "format": "перечень:radio_band",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": [
+        "radio_band"
+      ]
+    },
+    {
+      "code": "frequency_mhz",
+      "label": "Частота, МГц",
+      "object": "radio_channel",
+      "format": "целое",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": []
+    },
+    {
+      "code": "wifi_channel",
+      "label": "Канал",
+      "object": "radio_channel",
+      "format": "целое:1–233",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": [
+        "wifi_channel"
+      ]
+    },
+    {
+      "code": "proto",
+      "label": "Протокол",
+      "object": "radio_channel",
+      "format": "перечень:proto ×N",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": [
+        "proto"
+      ]
+    },
+    {
+      "code": "ssid",
+      "label": "SSID",
+      "object": "radio_channel",
+      "format": "строка:32",
+      "comparable": true,
+      "normClass": "строка",
+      "identifying": "loose",
+      "autoSecret": false,
+      "legacyNames": [
+        "wifi_ssid",
+        "wifi_ap"
+      ]
+    },
+    {
+      "code": "wfb_link_id",
+      "label": "ID линка WFB",
+      "object": "radio_channel",
+      "format": "целое",
+      "comparable": true,
+      "normClass": "целое",
+      "identifying": "loose",
+      "autoSecret": false,
+      "legacyNames": [
+        "wfb_link_id"
+      ]
+    },
+    {
+      "code": "radio_network_id",
+      "label": "ID радиосети",
+      "object": "radio_channel",
+      "format": "строка:64",
+      "comparable": true,
+      "normClass": "строка",
+      "identifying": "loose",
+      "autoSecret": false,
+      "legacyNames": []
+    },
+    {
+      "code": "regdom",
+      "label": "Регуляторный домен",
+      "object": "radio_channel",
+      "format": "перечень:country",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": [
+        "regdom"
+      ]
+    },
+    {
+      "code": "wifi_psk",
+      "label": "Ключ Wi-Fi (PSK, пароль)",
+      "object": "radio_channel",
+      "format": "строка:64",
+      "comparable": false,
+      "normClass": "строка",
+      "identifying": "none",
+      "autoSecret": true,
+      "legacyNames": [
+        "wifi_cred",
+        "wifi_creds",
+        "wifi_psk_hex"
+      ]
+    },
+    {
+      "code": "video_url",
+      "label": "Адрес видеопотока",
+      "object": "radio_channel",
+      "format": "url",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": [
+        "rtsp_url",
+        "rtsp",
+        "video_srv"
+      ]
+    },
+    {
+      "code": "video_codec",
+      "label": "Кодек видео",
+      "object": "radio_channel",
+      "format": "перечень:video_codec",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": []
+    },
+    {
+      "code": "software_kind",
+      "label": "Вид",
+      "object": "software",
+      "format": "перечень:software_kind",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": []
+    },
+    {
+      "code": "software_name",
+      "label": "Имя",
+      "object": "software",
+      "format": "строка:128",
+      "comparable": false,
+      "normClass": "строка-без-регистра",
+      "identifying": "loose",
+      "autoSecret": false,
+      "legacyNames": [
+        "software",
+        "binary",
+        "service",
+        "container",
+        "android_package",
+        "gcs_client",
+        "http_server",
+        "lua_script"
+      ]
+    },
+    {
+      "code": "software_version",
+      "label": "Версия",
+      "object": "software",
+      "format": "строка:64",
+      "comparable": false,
+      "normClass": "строка-без-регистра",
+      "identifying": "loose",
+      "autoSecret": false,
+      "legacyNames": [
+        "firmware"
+      ]
+    },
+    {
+      "code": "autopilot_stack",
+      "label": "Стек автопилота",
+      "object": "software",
+      "format": "перечень:autopilot_stack",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": [
+        "autopilot_stack"
+      ]
+    },
+    {
+      "code": "vehicle_type",
+      "label": "Тип аппарата",
+      "object": "software",
+      "format": "перечень:vehicle_type",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": []
+    },
+    {
+      "code": "git_commit",
+      "label": "Git-коммит сборки",
+      "object": "software",
+      "format": "hex:7..40",
+      "comparable": false,
+      "normClass": "hex",
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": [
+        "build_id",
+        "git_desc"
+      ]
+    },
+    {
+      "code": "mavlink_sysid",
+      "label": "MAVLink SYSID",
+      "object": "flight_profile",
+      "format": "целое:1–255",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": [
+        "mavlink_sysid",
+        "sysid_default"
+      ]
+    },
+    {
+      "code": "ap_param",
+      "label": "Параметр автопилота",
+      "object": "flight_profile",
+      "format": "параметр",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": [
+        "param_value",
+        "named_float"
+      ]
+    },
+    {
+      "code": "failsafe_action",
+      "label": "Действие failsafe",
+      "object": "flight_profile",
+      "format": "перечень:failsafe_action ×N",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": [
+        "failsafe_profile"
+      ]
+    },
+    {
+      "code": "param_storage_format",
+      "label": "Формат хранилища параметров",
+      "object": "flight_profile",
+      "format": "строка:64",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": [
+        "storage_format"
+      ]
+    },
+    {
+      "code": "crypto_scheme",
+      "label": "Схема шифрования",
+      "object": "crypto",
+      "format": "перечень:crypto_scheme",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": [
+        "crypto_scheme",
+        "rootfs_encryption (devices.csv)"
+      ]
+    },
+    {
+      "code": "key_binding",
+      "label": "Привязка ключа",
+      "object": "crypto",
+      "format": "перечень:key_binding ×N",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": []
+    },
+    {
+      "code": "luks_uuid",
+      "label": "LUKS UUID",
+      "object": "crypto",
+      "format": "guid",
+      "comparable": true,
+      "normClass": "guid",
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": [
+        "luks_uuid",
+        "luks_uuid_storage"
+      ]
+    },
+    {
+      "code": "dm_name",
+      "label": "Имя устройства dm-crypt",
+      "object": "crypto",
+      "format": "строка:64",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": [
+        "luks_mapper"
+      ]
+    },
+    {
+      "code": "crypto_secret",
+      "label": "Пароль или ключ шифрования (восстановленный)",
+      "object": "crypto",
+      "format": "строка:512",
+      "comparable": false,
+      "normClass": "строка",
+      "identifying": "none",
+      "autoSecret": true,
+      "legacyNames": [
+        "luks_password"
+      ]
+    },
+    {
+      "code": "geo_kind",
+      "label": "Вид",
+      "object": "geo_object",
+      "format": "перечень:geo_kind",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": []
+    },
+    {
+      "code": "terrain_tile",
+      "label": "Тайл рельефа",
+      "object": "geo_object",
+      "format": "тайл",
+      "comparable": false,
+      "normClass": "строка-без-регистра",
+      "identifying": "strict",
+      "autoSecret": false,
+      "legacyNames": [
+        "terrain_tile",
+        "terrain_cache"
+      ]
+    },
+    {
+      "code": "region_name",
+      "label": "Район",
+      "object": "geo_object",
+      "format": "строка:128",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": [
+        "terrain_region",
+        "flight_area"
+      ]
+    },
+    {
+      "code": "geo_shape",
+      "label": "Координаты, область",
+      "object": "geo_object",
+      "format": "гео",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": [
+        "gps_track"
+      ]
+    },
+    {
+      "code": "hw_kind",
+      "label": "Вид элемента",
+      "object": "hw_element",
+      "format": "перечень:hw_kind",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": []
+    },
+    {
+      "code": "hw_model",
+      "label": "Модель, платформа",
+      "object": "hw_element",
+      "format": "строка:128",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": [
+        "hw_model",
+        "hardware_profile",
+        "client_model"
+      ]
+    },
+    {
+      "code": "manufacturer",
+      "label": "Производитель",
+      "object": "hw_element",
+      "format": "строка:64",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": [
+        "brand"
+      ]
+    },
+    {
+      "code": "serial",
+      "label": "Серийный номер",
+      "object": "hw_element",
+      "format": "серийный",
+      "comparable": true,
+      "normClass": "серийный",
+      "identifying": "loose",
+      "autoSecret": false,
+      "legacyNames": [
+        "serial",
+        "serial_number",
+        "usb_serial",
+        "disk_serial"
+      ]
+    },
+    {
+      "code": "sd_cid",
+      "label": "CID карты SD/eMMC",
+      "object": "hw_element",
+      "format": "hex:32",
+      "comparable": true,
+      "normClass": "hex",
+      "identifying": "strict",
+      "autoSecret": false,
+      "legacyNames": [
+        "sd_cid"
+      ]
+    },
+    {
+      "code": "mcu_uid",
+      "label": "UID микроконтроллера",
+      "object": "hw_element",
+      "format": "hex:24",
+      "comparable": true,
+      "normClass": "hex",
+      "identifying": "strict",
+      "autoSecret": false,
+      "legacyNames": [
+        "board_uid"
+      ]
+    },
+    {
+      "code": "mac",
+      "label": "MAC-адрес",
+      "object": "hw_element",
+      "format": "hex:12",
+      "comparable": true,
+      "normClass": "hex",
+      "identifying": "strict",
+      "autoSecret": false,
+      "legacyNames": [
+        "mac",
+        "mac_eth0"
+      ]
+    },
+    {
+      "code": "imei",
+      "label": "IMEI",
+      "object": "hw_element",
+      "format": "серийный (15 цифр)",
+      "comparable": true,
+      "normClass": "серийный",
+      "identifying": "strict",
+      "autoSecret": false,
+      "legacyNames": []
+    },
+    {
+      "code": "iccid",
+      "label": "ICCID",
+      "object": "hw_element",
+      "format": "серийный (19–20 цифр)",
+      "comparable": true,
+      "normClass": "серийный",
+      "identifying": "strict",
+      "autoSecret": false,
+      "legacyNames": []
+    },
+    {
+      "code": "usb_vid_pid",
+      "label": "USB VID:PID",
+      "object": "hw_element",
+      "format": "hex:8 (vvvv:pppp)",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": [
+        "usb_vid_pid",
+        "usb_vidpid",
+        "usb_id"
+      ]
+    },
+    {
+      "code": "fcc_id",
+      "label": "FCC ID",
+      "object": "hw_element",
+      "format": "строка:32",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": [
+        "fcc_id"
+      ]
+    },
+    {
+      "code": "board_rev",
+      "label": "Ревизия платы",
+      "object": "hw_element",
+      "format": "строка:32",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": [
+        "board_rev",
+        "firmware_or_rev"
+      ]
+    },
+    {
+      "code": "chip_lot",
+      "label": "Партия чипа",
+      "object": "hw_element",
+      "format": "серийный",
+      "comparable": true,
+      "normClass": "серийный",
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": [
+        "soc_lot"
+      ]
+    },
+    {
+      "code": "inventory_mark",
+      "label": "Инвентарная метка",
+      "object": "hw_element",
+      "format": "строка:64",
+      "comparable": true,
+      "normClass": "строка-без-регистра",
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": [
+        "inventory_mark"
+      ]
+    },
+    {
+      "code": "marking",
+      "label": "Маркировка",
+      "object": "hw_element",
+      "format": "строка:128",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": [
+        "hardware_marker",
+        "board_mark"
+      ]
+    },
+    {
+      "code": "media_type",
+      "label": "Тип носителя",
+      "object": "hw_element",
+      "format": "перечень:media_type",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": []
+    },
+    {
+      "code": "capacity_bytes",
+      "label": "Объём, байт",
+      "object": "hw_element",
+      "format": "целое",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": []
+    },
+    {
+      "code": "mbr_disk_id",
+      "label": "Подпись диска MBR",
+      "object": "hw_element",
+      "format": "hex:8",
+      "comparable": true,
+      "normClass": "hex",
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": [
+        "partuuid",
+        "PARTUUID",
+        "partuuid_base"
+      ]
+    },
+    {
+      "code": "gpt_guid",
+      "label": "GUID диска или раздела GPT",
+      "object": "hw_element",
+      "format": "guid",
+      "comparable": true,
+      "normClass": "guid",
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": []
+    },
+    {
+      "code": "fs_uuid",
+      "label": "UUID файловой системы",
+      "object": "hw_element",
+      "format": "guid",
+      "comparable": true,
+      "normClass": "guid",
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": [
+        "fs_uuid",
+        "rootfs_uuid",
+        "volume_uuid"
+      ]
+    },
+    {
+      "code": "fat_serial",
+      "label": "Серийный номер тома FAT",
+      "object": "hw_element",
+      "format": "hex:8 (XXXX-XXXX)",
+      "comparable": true,
+      "normClass": "hex",
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": [
+        "boot_fat_uuid"
+      ]
+    },
+    {
+      "code": "fs_type",
+      "label": "Файловая система",
+      "object": "hw_element",
+      "format": "перечень:fs_type ×N",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": []
+    },
+    {
+      "code": "partition_layout",
+      "label": "Разметка",
+      "object": "hw_element",
+      "format": "строка:255",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": [
+        "partition_layout"
+      ]
+    },
+    {
+      "code": "file_sha256",
+      "label": "SHA-256 файла",
+      "object": "artifact",
+      "format": "hex:64",
+      "comparable": true,
+      "normClass": "hex",
+      "identifying": "strict",
+      "autoSecret": false,
+      "legacyNames": [
+        "file_hash",
+        "strg_sha256"
+      ]
+    },
+    {
+      "code": "file_path",
+      "label": "Путь на носителе",
+      "object": "artifact",
+      "format": "строка:1024",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": [
+        "artifact",
+        "host_artifact"
+      ]
+    },
+    {
+      "code": "file_name_marker",
+      "label": "Характерное имя файла",
+      "object": "artifact",
+      "format": "строка:255",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": [
+        "filename_marker"
+      ]
+    },
+    {
+      "code": "artifact_kind",
+      "label": "Вид",
+      "object": "artifact",
+      "format": "перечень:artifact_kind",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": []
+    },
+    {
+      "code": "event_kind",
+      "label": "Вид события",
+      "object": "event",
+      "format": "перечень:event_kind",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": [
+        "event",
+        "last_mount (вид)",
+        "ssh_login (вид)",
+        "ssh_key_mtime (вид)",
+        "domain_created (вид)",
+        "domain_modified (вид)"
+      ]
+    },
+    {
+      "code": "event_time",
+      "label": "Время",
+      "object": "event",
+      "format": "дата-время",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": []
+    },
+    {
+      "code": "time_source",
+      "label": "Источник времени",
+      "object": "event",
+      "format": "перечень:time_source",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": []
+    },
+    {
+      "code": "purpose",
+      "label": "Назначение и полезная нагрузка",
+      "object": "@item",
+      "format": "перечень:purpose ×N",
+      "comparable": false,
+      "normClass": null,
+      "identifying": "none",
+      "autoSecret": false,
+      "legacyNames": []
+    }
+  ]
+}

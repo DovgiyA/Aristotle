@@ -1,0 +1,16 @@
+{
+  "note": "Векторы contracts/reestr-v1.md фичи 003. Ключи — из семян 32 × 0x01 (Ключ Координатора) и 32 × 0x02 (ключ подписи Ключа Группы); значения условные.",
+  "coordinatorSeedByte": 1,
+  "coordinatorKey": "iojj3XQJ8ZX9UtstPLpdcspnCb8dlBIb83SIAbQPb1w",
+  "coordinatorKeyFingerprint": "3475 0f98 bd59 fcfc 946d a45a aabe 933b",
+  "groupSeedByte": 2,
+  "groupSigningKey": "gTl3Dqh9F19Wo1Rmw0x+zMuNipG07jeiXfYPW4/Js5Q",
+  "groupKeyFingerprint": "6a38 03d5 f059 902a 1c6d afbc 9ba4 7292",
+  "format": "aristotel/reestr/v1",
+  "body": "{\"number\":1,\"issuedAt\":\"2026-10-17T10:00:00.000Z\",\"coordinatingGroup\":\"A\",\"coordinatorKeys\":[\"iojj3XQJ8ZX9UtstPLpdcspnCb8dlBIb83SIAbQPb1w\"],\"groups\":[{\"code\":\"A\",\"signingKey\":\"gTl3Dqh9F19Wo1Rmw0x+zMuNipG07jeiXfYPW4/Js5Q\",\"encryptionKey\":\"age10ktnhwhsjdkkljth7xpsq6uz7j8kn548h28faamtzg4t4vyj7plsq8cezk\",\"state\":\"active\",\"relays\":[{\"url\":\"https://relay-x.test:8443\",\"tlsSpki\":\"L9GK+ECs/JTefIel29u2JYAOJC3vvbxGzHFowJtra8I\"}]}]}",
+  "bodySha256": "f6b029d4e3fd1f48a579495cefb922894903ebe60e3cddfd0fd53145ae78f449",
+  "signature": "xncPAsgpDs9T2rdpxLCy6RgJLwDC5cXnZnv62d5W4rOGZ2cKwICPc99rcJrL7vzXiveFacx3UGGJvDDMqqA0AA",
+  "relayXSpki": "L9GK+ECs/JTefIel29u2JYAOJC3vvbxGzHFowJtra8I",
+  "relayXReissuedSpki": "L9GK+ECs/JTefIel29u2JYAOJC3vvbxGzHFowJtra8I",
+  "relayYSpki": "Kp/OxwGG8xloaXnbPX4H7QySIjPphurUVn1nXrwdIoQ"
+}

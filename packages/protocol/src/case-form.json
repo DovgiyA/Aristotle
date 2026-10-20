@@ -1,0 +1,26 @@
+{
+  "$comment": "Тексты спецификации для Формуляра и Отчёта Кейса: общая часть Кейса — DATA-14 … DATA-19, разделы Отчёта — DATA-32, DATA-33 (docs/spec/spec.md, раздел 5.1). Данные, а не строки интерфейса: меняются только вместе со спецификацией.",
+  "general": [
+    { "field": "seizedAt", "label": "Дата изъятия, можно диапазоном", "required": true, "defaultSource": "manual", "code": "DATA-14" },
+    { "field": "receivedAt", "label": "Дата приёмки", "required": true, "defaultSource": "auto", "code": "DATA-15" },
+    { "field": "seizureArea", "label": "Район изъятия — Гео-объект", "required": false, "defaultSource": "manual", "code": "DATA-16" },
+    { "field": "shape", "label": "Борт или отдельное Изделие", "required": true, "defaultSource": "manual", "code": "DATA-17" },
+    { "field": "boardPhoto", "label": "Фото Борта целиком — Материал", "required": false, "defaultSource": "manual", "code": "DATA-18" },
+    { "field": "performers", "label": "Исполнители", "required": true, "defaultSource": "auto", "code": "DATA-19" }
+  ],
+  "reportCommon": [
+    "Резюме и вывод",
+    "Поступление и цепочка хранения",
+    "Идентификация",
+    "Защита информации",
+    "Связь и сеть",
+    "Следы оператора",
+    "Выводы",
+    "Рекомендации и открытые задачи"
+  ],
+  "reportByClass": {
+    "companion": ["Назначение и полезная нагрузка", "Загрузка и аппаратная обвязка", "Программный стек"],
+    "flight_controller": ["Полётный стек и параметры", "Terrain и район применения", "Lua-скрипты", "Логи полётов"],
+    "radio_module": ["Радиолинк и ключи сопряжения"]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "@aristotel/core",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./keys": "./src/keys/key-file.ts",
+    "./install": "./src/install/install.ts",
+    "./tls": "./src/tls/tls-key.ts"
+  },
+  "dependencies": {
+    "@aristotel/protocol": "0.1.0",
+    "@fastify/type-provider-typebox": "^6.0.0",
+    "age-encryption": "0.3.1",
+    "fastify": "^5.0.0"
+  }
+}

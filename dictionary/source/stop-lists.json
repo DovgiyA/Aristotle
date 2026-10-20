@@ -1,0 +1,51 @@
+[
+  {
+    "code": "common_defaults",
+    "label": "Общие умолчания",
+    "section": "8.1",
+    "source": "нет, правится вручную",
+    "rows": 115
+  },
+  {
+    "code": "pi_gen_commits",
+    "label": "Коммиты pi-gen официальных образов",
+    "section": "8.2",
+    "source": "архив downloads.raspberrypi.com и теги RPi-Distro/pi-gen",
+    "rows": 113
+  },
+  {
+    "code": "zerotier",
+    "label": "ZeroTier",
+    "section": "8.3",
+    "source": "исходники ZeroTierOne",
+    "rows": 30
+  },
+  {
+    "code": "zerotier_central_controllers",
+    "label": "Контроллеры ZeroTier Central",
+    "section": "8.4",
+    "source": "нет, правится вручную",
+    "rows": 18
+  },
+  {
+    "code": "wfb_default_keys",
+    "label": "Ключи WFB-ng по умолчанию",
+    "section": "8.5",
+    "source": "репозитории wfb-ng, OpenIPC, OpenHD",
+    "rows": 8
+  },
+  {
+    "code": "px4_firmware",
+    "label": "Прошивки PX4",
+    "section": "8.6",
+    "source": "выпуски PX4/PX4-Autopilot на GitHub",
+    "rows": 4774
+  },
+  {
+    "code": "ardupilot_firmware",
+    "label": "Прошивки ArduPilot",
+    "section": "8.7",
+    "source": "manifest.json.gz ArduPilot",
+    "rows": 33233
+  }
+]

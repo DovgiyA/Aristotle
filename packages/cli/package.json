@@ -1,0 +1,19 @@
+{
+  "name": "@aristotel/cli",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "aristotel": "src/main.ts"
+  },
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@aristotel/core": "0.1.0",
+    "@aristotel/protocol": "0.1.0",
+    "@aristotel/relay": "0.1.0",
+    "@aristotel/station": "0.1.0",
+    "age-encryption": "0.3.1"
+  }
+}

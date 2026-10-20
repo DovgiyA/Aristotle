@@ -1,0 +1,8 @@
+.DS_Store
+.claude/worktrees/
+node_modules/
+dist/
+coverage/
+*.log
+.env*
+.tmp/

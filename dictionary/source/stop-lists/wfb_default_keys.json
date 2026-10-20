@@ -1,0 +1,57 @@
+{
+  "format": "aristotel/stop-list/v1",
+  "code": "wfb_default_keys",
+  "label": "Ключи WFB-ng по умолчанию",
+  "source": "репозитории wfb-ng, OpenIPC, OpenHD",
+  "builtAt": "2026-10-13",
+  "rows": [
+    {
+      "type": "pairing_key_sha256",
+      "kind": "value",
+      "value": "d6c8a83d6f135273562d99efdfaadf14ee89f9e3589a01ca99863fe7bbc7a098",
+      "note": "wfb-ng, bind.key по умолчанию, 25.01.1+"
+    },
+    {
+      "type": "pairing_key_sha256",
+      "kind": "value",
+      "value": "5d1fb4bcb296db699df41bc2e3ccf3878a37674403873ff64f51593202f89234",
+      "note": "wfb-ng, bind.key по умолчанию, 25.01-rc2 и 25.01"
+    },
+    {
+      "type": "pairing_key_sha256",
+      "kind": "value",
+      "value": "3ff787cdaa3db5bc2e0be09adb315900c311158ef343618d91e9bf8f97c60353",
+      "note": "wfb-ng, gs.key из пароля secret password (тестовый вектор документации), 25.01+"
+    },
+    {
+      "type": "pairing_key_sha256",
+      "kind": "value",
+      "value": "a70f7d418f42064e0c4c33e2562885c4b524420cb90ac08d4198e511779a4c07",
+      "note": "wfb-ng, drone.key из пароля secret password (тестовый вектор документации), 25.01+"
+    },
+    {
+      "type": "pairing_key_sha256",
+      "kind": "value",
+      "value": "ab257504faec5e25e6601761df7c23c6c255ec5e0bcc7234fc3278ab3ac3bc29",
+      "note": "OpenIPC, drone.key прошивки с 2023-11-15; он же drone.key и gs.key образа sbc-groundstations с 2025-11-28"
+    },
+    {
+      "type": "pairing_key_sha256",
+      "kind": "value",
+      "value": "de34d5880cc948bf8c1c5c4f4aeb8abb10704277720d396894f8dd0ca3fd13f2",
+      "note": "OpenIPC, парный gs.key из репозитория прошивки, с 2023-11-15"
+    },
+    {
+      "type": "pairing_key_sha256",
+      "kind": "value",
+      "value": "4e832f0c7c367d8eaab552c3d7bd80cef6edd04a3eba03f427618d1043f98781",
+      "note": "OpenHD, txrx.key из пароля openhd, v2.6.0+"
+    },
+    {
+      "type": "pairing_key_sha256",
+      "kind": "value",
+      "value": "303f281633b064351c77e228dfcbd41fc52e52a2f2ce3fdefe609f24e3d09ba9",
+      "note": "OpenHD, txrx.key из пароля openhd, раскладка 2023-08…2023-12"
+    }
+  ]
+}

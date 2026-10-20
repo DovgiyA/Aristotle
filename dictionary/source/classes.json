@@ -1,0 +1,1498 @@
+{
+  "templates": [
+    {
+      "class": "companion",
+      "blocks": [
+        {
+          "block": "header",
+          "fields": [
+            {
+              "label": "Класс изделия, подтип",
+              "required": true,
+              "defaultSource": "manual",
+              "target": {
+                "programField": "itemClass,itemSubtype"
+              }
+            },
+            {
+              "label": "Аппаратная платформа (плата, SoC, модель)",
+              "required": true,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "hw_element",
+                "indicatorTypes": [
+                  "hw_kind",
+                  "hw_model",
+                  "manufacturer"
+                ],
+                "link": "has_element"
+              }
+            },
+            {
+              "label": "Серийные номера, MAC, FCC ID, маркировки",
+              "required": false,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "hw_element",
+                "indicatorTypes": [
+                  "serial",
+                  "sd_cid",
+                  "mcu_uid",
+                  "mac",
+                  "fcc_id",
+                  "marking",
+                  "inventory_mark"
+                ]
+              }
+            },
+            {
+              "label": "Фото платы",
+              "required": false,
+              "defaultSource": "manual",
+              "target": {
+                "material": true
+              },
+              "note": "н, с предупреждением"
+            }
+          ]
+        },
+        {
+          "block": "media",
+          "fields": [
+            {
+              "label": "Тип носителя",
+              "required": true,
+              "defaultSource": "manual",
+              "target": {
+                "objectKind": "hw_element",
+                "indicatorTypes": [
+                  "media_type"
+                ]
+              }
+            },
+            {
+              "label": "Объём",
+              "required": true,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "hw_element",
+                "indicatorTypes": [
+                  "capacity_bytes"
+                ]
+              }
+            },
+            {
+              "label": "Производитель и серийный номер",
+              "required": false,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "hw_element",
+                "indicatorTypes": [
+                  "manufacturer",
+                  "serial",
+                  "sd_cid"
+                ]
+              }
+            },
+            {
+              "label": "Разметка: таблица разделов, ФС, метки, PARTUUID, UUID",
+              "required": true,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "hw_element",
+                "indicatorTypes": [
+                  "partition_layout",
+                  "mbr_disk_id",
+                  "gpt_guid",
+                  "fs_uuid",
+                  "fat_serial",
+                  "fs_type"
+                ]
+              }
+            },
+            {
+              "label": "Способ снятия",
+              "required": true,
+              "defaultSource": "manual",
+              "target": {
+                "programField": "acquisitionMethod"
+              }
+            },
+            {
+              "label": "Средство снятия с версией, станция приёмки",
+              "required": true,
+              "defaultSource": "auto",
+              "target": {
+                "programField": "acquisitionTool,intakeStation"
+              }
+            },
+            {
+              "label": "Статус извлечения",
+              "required": true,
+              "defaultSource": "manual",
+              "target": {
+                "programField": "extractionStatus"
+              }
+            }
+          ]
+        },
+        {
+          "block": "os",
+          "fields": [
+            {
+              "label": "ОС и версия; ядро",
+              "required": true,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "platform",
+                "indicatorTypes": [
+                  "os_distro",
+                  "os_version",
+                  "kernel_version"
+                ]
+              }
+            },
+            {
+              "label": "Сборка образа (pi-gen commit, build id)",
+              "required": false,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "platform",
+                "indicatorTypes": [
+                  "image_build",
+                  "git_commit"
+                ]
+              }
+            },
+            {
+              "label": "Имя хоста; machine-id",
+              "required": true,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "platform",
+                "indicatorTypes": [
+                  "hostname",
+                  "machine_id"
+                ]
+              },
+              "note": "О; н"
+            },
+            {
+              "label": "Часовой пояс (Area/City); раскладка",
+              "required": true,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "platform",
+                "indicatorTypes": [
+                  "timezone",
+                  "keyboard"
+                ]
+              },
+              "note": "О; н"
+            },
+            {
+              "label": "Учётки с типом хэша пароля",
+              "required": true,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "operator",
+                "indicatorTypes": [
+                  "username",
+                  "password_hash",
+                  "password_hash_type",
+                  "password"
+                ],
+                "link": "authored_by"
+              }
+            },
+            {
+              "label": "SSH host-ключи; authorized_keys",
+              "required": true,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "key",
+                "indicatorTypes": [
+                  "ssh_fingerprint",
+                  "key_kind",
+                  "key_algo",
+                  "key_comment"
+                ],
+                "link": "uses_key"
+              }
+            },
+            {
+              "label": "Станция сборки (build host, last mount, volume GUID)",
+              "required": true,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "build_station",
+                "indicatorTypes": [
+                  "build_host",
+                  "win_volume_guid",
+                  "indexer_volume_guid",
+                  "build_path"
+                ],
+                "link": "built_on"
+              }
+            },
+            {
+              "label": "Шифрование: схема, LUKS UUID, привязка OTP/RFID",
+              "required": true,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "crypto",
+                "indicatorTypes": [
+                  "crypto_scheme",
+                  "luks_uuid",
+                  "key_binding",
+                  "dm_name",
+                  "crypto_secret"
+                ]
+              }
+            },
+            {
+              "label": "Загрузка: config.txt, cmdline, overlays, загрузчик/EEPROM, secure boot",
+              "required": false,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "platform",
+                "indicatorTypes": [
+                  "boot_param",
+                  "dt_overlay",
+                  "bootloader",
+                  "secure_boot"
+                ]
+              }
+            },
+            {
+              "label": "VPN и overlay (OpenVPN, ZeroTier, WireGuard)",
+              "required": true,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "infra_node",
+                "indicatorTypes": [
+                  "node_kind",
+                  "domain",
+                  "ip",
+                  "port",
+                  "zerotier_network",
+                  "zerotier_node",
+                  "x509_fingerprint",
+                  "x509_cn",
+                  "wireguard_pubkey"
+                ],
+                "link": "controlled_via"
+              }
+            },
+            {
+              "label": "Wi-Fi профили; домены и адреса",
+              "required": false,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "radio_channel",
+                "indicatorTypes": [
+                  "ssid",
+                  "wifi_psk"
+                ],
+                "link": "links_via"
+              }
+            },
+            {
+              "label": "ПО и сервисы (systemd, контейнеры, бинарники)",
+              "required": true,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "software",
+                "indicatorTypes": [
+                  "software_kind",
+                  "software_name",
+                  "software_version"
+                ],
+                "link": "contains_software"
+              }
+            }
+          ]
+        },
+        {
+          "block": "class",
+          "fields": [
+            {
+              "label": "Назначение и полезная нагрузка (видео, наведение, сброс, РЭБ…)",
+              "required": true,
+              "defaultSource": "manual",
+              "target": {
+                "objectKind": "@item",
+                "indicatorTypes": [
+                  "purpose"
+                ]
+              }
+            },
+            {
+              "label": "Основной стек ПО с версиями",
+              "required": true,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "software"
+              }
+            },
+            {
+              "label": "Камера и видеопоток (интерфейс, кодек, адрес потока)",
+              "required": false,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "radio_channel",
+                "indicatorTypes": [
+                  "video_url",
+                  "video_codec"
+                ]
+              }
+            },
+            {
+              "label": "Связь с полётным контроллером (MAVLink-роутер, UART, CAN)",
+              "required": false,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "software",
+                "link": "connected_to"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "flight_controller",
+      "blocks": [
+        {
+          "block": "header",
+          "fields": [
+            {
+              "label": "Класс изделия, подтип",
+              "required": true,
+              "defaultSource": "manual",
+              "target": {
+                "programField": "itemClass,itemSubtype"
+              }
+            },
+            {
+              "label": "Аппаратная платформа (плата, SoC, модель)",
+              "required": true,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "hw_element",
+                "indicatorTypes": [
+                  "hw_kind",
+                  "hw_model",
+                  "manufacturer"
+                ],
+                "link": "has_element"
+              }
+            },
+            {
+              "label": "Серийные номера, MAC, FCC ID, маркировки",
+              "required": false,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "hw_element",
+                "indicatorTypes": [
+                  "serial",
+                  "sd_cid",
+                  "mcu_uid",
+                  "mac",
+                  "fcc_id",
+                  "marking",
+                  "inventory_mark"
+                ]
+              }
+            },
+            {
+              "label": "Фото платы",
+              "required": false,
+              "defaultSource": "manual",
+              "target": {
+                "material": true
+              },
+              "note": "н, с предупреждением"
+            }
+          ]
+        },
+        {
+          "block": "media",
+          "fields": [
+            {
+              "label": "Тип носителя",
+              "required": true,
+              "defaultSource": "manual",
+              "target": {
+                "objectKind": "hw_element",
+                "indicatorTypes": [
+                  "media_type"
+                ]
+              }
+            },
+            {
+              "label": "Объём",
+              "required": true,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "hw_element",
+                "indicatorTypes": [
+                  "capacity_bytes"
+                ]
+              }
+            },
+            {
+              "label": "Производитель и серийный номер",
+              "required": false,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "hw_element",
+                "indicatorTypes": [
+                  "manufacturer",
+                  "serial",
+                  "sd_cid"
+                ]
+              }
+            },
+            {
+              "label": "Разметка: таблица разделов, ФС, метки, PARTUUID, UUID",
+              "required": true,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "hw_element",
+                "indicatorTypes": [
+                  "partition_layout",
+                  "mbr_disk_id",
+                  "gpt_guid",
+                  "fs_uuid",
+                  "fat_serial",
+                  "fs_type"
+                ]
+              }
+            },
+            {
+              "label": "Способ снятия",
+              "required": true,
+              "defaultSource": "manual",
+              "target": {
+                "programField": "acquisitionMethod"
+              }
+            },
+            {
+              "label": "Средство снятия с версией, станция приёмки",
+              "required": true,
+              "defaultSource": "auto",
+              "target": {
+                "programField": "acquisitionTool,intakeStation"
+              }
+            },
+            {
+              "label": "Статус извлечения",
+              "required": true,
+              "defaultSource": "manual",
+              "target": {
+                "programField": "extractionStatus"
+              }
+            }
+          ]
+        },
+        {
+          "block": "class",
+          "fields": [
+            {
+              "label": "Стек автопилота (ArduPilot, PX4, INAV), тип (Copter, Plane), версия, хэш сборки",
+              "required": true,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "software",
+                "indicatorTypes": [
+                  "autopilot_stack",
+                  "vehicle_type",
+                  "software_version",
+                  "git_commit"
+                ]
+              }
+            },
+            {
+              "label": "Board ID, UID микроконтроллера",
+              "required": false,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "hw_element",
+                "indicatorTypes": [
+                  "board_rev",
+                  "mcu_uid"
+                ]
+              }
+            },
+            {
+              "label": "Ключевые параметры: режимы, failsafe, SYSID, ограничения",
+              "required": true,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "flight_profile",
+                "indicatorTypes": [
+                  "ap_param",
+                  "failsafe_action",
+                  "mavlink_sysid",
+                  "param_storage_format"
+                ],
+                "link": "has_profile"
+              }
+            },
+            {
+              "label": "История слотов STRG",
+              "required": false,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "flight_profile",
+                "indicatorTypes": [
+                  "file_sha256"
+                ]
+              }
+            },
+            {
+              "label": "Lua-скрипты",
+              "required": false,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "software",
+                "indicatorTypes": [
+                  "software_kind"
+                ]
+              }
+            },
+            {
+              "label": "Terrain: регион, тайлы",
+              "required": false,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "geo_object",
+                "indicatorTypes": [
+                  "terrain_tile",
+                  "region_name"
+                ],
+                "link": "operates_in"
+              }
+            },
+            {
+              "label": "Логи полётов: наличие, район, время",
+              "required": false,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "geo_object",
+                "indicatorTypes": [
+                  "geo_shape"
+                ]
+              }
+            },
+            {
+              "label": "Подпись или позывной в параметрах",
+              "required": false,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "operator",
+                "indicatorTypes": [
+                  "callsign"
+                ],
+                "link": "authored_by"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "radio_module",
+      "blocks": [
+        {
+          "block": "header",
+          "fields": [
+            {
+              "label": "Класс изделия, подтип",
+              "required": true,
+              "defaultSource": "manual",
+              "target": {
+                "programField": "itemClass,itemSubtype"
+              }
+            },
+            {
+              "label": "Аппаратная платформа (плата, SoC, модель)",
+              "required": true,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "hw_element",
+                "indicatorTypes": [
+                  "hw_kind",
+                  "hw_model",
+                  "manufacturer"
+                ],
+                "link": "has_element"
+              }
+            },
+            {
+              "label": "Серийные номера, MAC, FCC ID, маркировки",
+              "required": false,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "hw_element",
+                "indicatorTypes": [
+                  "serial",
+                  "sd_cid",
+                  "mcu_uid",
+                  "mac",
+                  "fcc_id",
+                  "marking",
+                  "inventory_mark"
+                ]
+              }
+            },
+            {
+              "label": "Фото платы",
+              "required": false,
+              "defaultSource": "manual",
+              "target": {
+                "material": true
+              },
+              "note": "н, с предупреждением"
+            }
+          ]
+        },
+        {
+          "block": "media",
+          "fields": [
+            {
+              "label": "Тип носителя",
+              "required": true,
+              "defaultSource": "manual",
+              "target": {
+                "objectKind": "hw_element",
+                "indicatorTypes": [
+                  "media_type"
+                ]
+              }
+            },
+            {
+              "label": "Объём",
+              "required": true,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "hw_element",
+                "indicatorTypes": [
+                  "capacity_bytes"
+                ]
+              }
+            },
+            {
+              "label": "Производитель и серийный номер",
+              "required": false,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "hw_element",
+                "indicatorTypes": [
+                  "manufacturer",
+                  "serial",
+                  "sd_cid"
+                ]
+              }
+            },
+            {
+              "label": "Разметка: таблица разделов, ФС, метки, PARTUUID, UUID",
+              "required": true,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "hw_element",
+                "indicatorTypes": [
+                  "partition_layout",
+                  "mbr_disk_id",
+                  "gpt_guid",
+                  "fs_uuid",
+                  "fat_serial",
+                  "fs_type"
+                ]
+              }
+            },
+            {
+              "label": "Способ снятия",
+              "required": true,
+              "defaultSource": "manual",
+              "target": {
+                "programField": "acquisitionMethod"
+              }
+            },
+            {
+              "label": "Средство снятия с версией, станция приёмки",
+              "required": true,
+              "defaultSource": "auto",
+              "target": {
+                "programField": "acquisitionTool,intakeStation"
+              }
+            },
+            {
+              "label": "Статус извлечения",
+              "required": true,
+              "defaultSource": "manual",
+              "target": {
+                "programField": "extractionStatus"
+              }
+            }
+          ]
+        },
+        {
+          "block": "class",
+          "fields": [
+            {
+              "label": "Тип линка (WFB, MANET-радио, RC-линк, сотовый модем, спутниковый, иное)",
+              "required": true,
+              "defaultSource": "manual",
+              "target": {
+                "indicatorTypes": [
+                  "link_type"
+                ],
+                "objectKind": "radio_channel"
+              }
+            },
+            {
+              "label": "Диапазон; протокол",
+              "required": true,
+              "defaultSource": "manual",
+              "target": {
+                "indicatorTypes": [
+                  "radio_band",
+                  "frequency_mhz",
+                  "proto"
+                ],
+                "objectKind": "radio_channel"
+              }
+            },
+            {
+              "label": "Идентификаторы сети (SSID, канал, ID сети)",
+              "required": false,
+              "defaultSource": "auto",
+              "target": {
+                "indicatorTypes": [
+                  "ssid",
+                  "wifi_channel",
+                  "wfb_link_id",
+                  "radio_network_id"
+                ],
+                "objectKind": "radio_channel"
+              }
+            },
+            {
+              "label": "Ключи сопряжения (отпечаток)",
+              "required": false,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "key",
+                "indicatorTypes": [
+                  "pairing_key_sha256"
+                ]
+              }
+            },
+            {
+              "label": "Видеопоток",
+              "required": false,
+              "defaultSource": "auto",
+              "target": {
+                "indicatorTypes": [
+                  "video_url"
+                ],
+                "objectKind": "radio_channel"
+              }
+            },
+            {
+              "label": "Серийный номер, MAC, IMEI, ICCID",
+              "required": false,
+              "defaultSource": "manual",
+              "target": {
+                "objectKind": "hw_element"
+              }
+            }
+          ]
+        },
+        {
+          "block": "os",
+          "fields": [
+            {
+              "label": "ОС и версия; ядро",
+              "required": true,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "platform",
+                "indicatorTypes": [
+                  "os_distro",
+                  "os_version",
+                  "kernel_version"
+                ]
+              }
+            },
+            {
+              "label": "Сборка образа (pi-gen commit, build id)",
+              "required": false,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "platform",
+                "indicatorTypes": [
+                  "image_build",
+                  "git_commit"
+                ]
+              }
+            },
+            {
+              "label": "Имя хоста; machine-id",
+              "required": true,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "platform",
+                "indicatorTypes": [
+                  "hostname",
+                  "machine_id"
+                ]
+              },
+              "note": "О; н"
+            },
+            {
+              "label": "Часовой пояс (Area/City); раскладка",
+              "required": true,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "platform",
+                "indicatorTypes": [
+                  "timezone",
+                  "keyboard"
+                ]
+              },
+              "note": "О; н"
+            },
+            {
+              "label": "Учётки с типом хэша пароля",
+              "required": true,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "operator",
+                "indicatorTypes": [
+                  "username",
+                  "password_hash",
+                  "password_hash_type",
+                  "password"
+                ],
+                "link": "authored_by"
+              }
+            },
+            {
+              "label": "SSH host-ключи; authorized_keys",
+              "required": true,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "key",
+                "indicatorTypes": [
+                  "ssh_fingerprint",
+                  "key_kind",
+                  "key_algo",
+                  "key_comment"
+                ],
+                "link": "uses_key"
+              }
+            },
+            {
+              "label": "Станция сборки (build host, last mount, volume GUID)",
+              "required": true,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "build_station",
+                "indicatorTypes": [
+                  "build_host",
+                  "win_volume_guid",
+                  "indexer_volume_guid",
+                  "build_path"
+                ],
+                "link": "built_on"
+              }
+            },
+            {
+              "label": "Шифрование: схема, LUKS UUID, привязка OTP/RFID",
+              "required": true,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "crypto",
+                "indicatorTypes": [
+                  "crypto_scheme",
+                  "luks_uuid",
+                  "key_binding",
+                  "dm_name",
+                  "crypto_secret"
+                ]
+              }
+            },
+            {
+              "label": "Загрузка: config.txt, cmdline, overlays, загрузчик/EEPROM, secure boot",
+              "required": false,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "platform",
+                "indicatorTypes": [
+                  "boot_param",
+                  "dt_overlay",
+                  "bootloader",
+                  "secure_boot"
+                ]
+              }
+            },
+            {
+              "label": "VPN и overlay (OpenVPN, ZeroTier, WireGuard)",
+              "required": true,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "infra_node",
+                "indicatorTypes": [
+                  "node_kind",
+                  "domain",
+                  "ip",
+                  "port",
+                  "zerotier_network",
+                  "zerotier_node",
+                  "x509_fingerprint",
+                  "x509_cn",
+                  "wireguard_pubkey"
+                ],
+                "link": "controlled_via"
+              }
+            },
+            {
+              "label": "Wi-Fi профили; домены и адреса",
+              "required": false,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "radio_channel",
+                "indicatorTypes": [
+                  "ssid",
+                  "wifi_psk"
+                ],
+                "link": "links_via"
+              }
+            },
+            {
+              "label": "ПО и сервисы (systemd, контейнеры, бинарники)",
+              "required": true,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "software",
+                "indicatorTypes": [
+                  "software_kind",
+                  "software_name",
+                  "software_version"
+                ],
+                "link": "contains_software"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "companion",
+      "subtype": "bare_media",
+      "blocks": [
+        {
+          "block": "header",
+          "fields": [
+            {
+              "label": "Класс изделия, подтип",
+              "required": true,
+              "defaultSource": "manual",
+              "target": {
+                "programField": "itemClass,itemSubtype"
+              }
+            },
+            {
+              "label": "Аппаратная платформа (плата, SoC, модель)",
+              "required": true,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "hw_element",
+                "indicatorTypes": [
+                  "hw_kind",
+                  "hw_model",
+                  "manufacturer"
+                ],
+                "link": "has_element"
+              }
+            },
+            {
+              "label": "Серийные номера, MAC, FCC ID, маркировки",
+              "required": false,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "hw_element",
+                "indicatorTypes": [
+                  "serial",
+                  "sd_cid",
+                  "mcu_uid",
+                  "mac",
+                  "fcc_id",
+                  "marking",
+                  "inventory_mark"
+                ]
+              }
+            },
+            {
+              "label": "Фото платы",
+              "required": false,
+              "defaultSource": "manual",
+              "target": {
+                "material": true
+              },
+              "note": "н, с предупреждением"
+            }
+          ]
+        },
+        {
+          "block": "media",
+          "fields": [
+            {
+              "label": "Тип носителя",
+              "required": true,
+              "defaultSource": "manual",
+              "target": {
+                "objectKind": "hw_element",
+                "indicatorTypes": [
+                  "media_type"
+                ]
+              }
+            },
+            {
+              "label": "Объём",
+              "required": true,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "hw_element",
+                "indicatorTypes": [
+                  "capacity_bytes"
+                ]
+              }
+            },
+            {
+              "label": "Производитель и серийный номер",
+              "required": false,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "hw_element",
+                "indicatorTypes": [
+                  "manufacturer",
+                  "serial",
+                  "sd_cid"
+                ]
+              }
+            },
+            {
+              "label": "Разметка: таблица разделов, ФС, метки, PARTUUID, UUID",
+              "required": true,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "hw_element",
+                "indicatorTypes": [
+                  "partition_layout",
+                  "mbr_disk_id",
+                  "gpt_guid",
+                  "fs_uuid",
+                  "fat_serial",
+                  "fs_type"
+                ]
+              }
+            },
+            {
+              "label": "Способ снятия",
+              "required": true,
+              "defaultSource": "manual",
+              "target": {
+                "programField": "acquisitionMethod"
+              }
+            },
+            {
+              "label": "Средство снятия с версией, станция приёмки",
+              "required": true,
+              "defaultSource": "auto",
+              "target": {
+                "programField": "acquisitionTool,intakeStation"
+              }
+            },
+            {
+              "label": "Статус извлечения",
+              "required": true,
+              "defaultSource": "manual",
+              "target": {
+                "programField": "extractionStatus"
+              }
+            }
+          ]
+        },
+        {
+          "block": "class",
+          "fields": [
+            {
+              "label": "Terrain: регион, тайлы",
+              "required": false,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "geo_object",
+                "indicatorTypes": [
+                  "terrain_tile",
+                  "region_name"
+                ],
+                "link": "operates_in"
+              }
+            },
+            {
+              "label": "Логи полётов: наличие, район, время",
+              "required": false,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "geo_object",
+                "indicatorTypes": [
+                  "geo_shape"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "flight_controller",
+      "subtype": "bare_media",
+      "blocks": [
+        {
+          "block": "header",
+          "fields": [
+            {
+              "label": "Класс изделия, подтип",
+              "required": true,
+              "defaultSource": "manual",
+              "target": {
+                "programField": "itemClass,itemSubtype"
+              }
+            },
+            {
+              "label": "Аппаратная платформа (плата, SoC, модель)",
+              "required": true,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "hw_element",
+                "indicatorTypes": [
+                  "hw_kind",
+                  "hw_model",
+                  "manufacturer"
+                ],
+                "link": "has_element"
+              }
+            },
+            {
+              "label": "Серийные номера, MAC, FCC ID, маркировки",
+              "required": false,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "hw_element",
+                "indicatorTypes": [
+                  "serial",
+                  "sd_cid",
+                  "mcu_uid",
+                  "mac",
+                  "fcc_id",
+                  "marking",
+                  "inventory_mark"
+                ]
+              }
+            },
+            {
+              "label": "Фото платы",
+              "required": false,
+              "defaultSource": "manual",
+              "target": {
+                "material": true
+              },
+              "note": "н, с предупреждением"
+            }
+          ]
+        },
+        {
+          "block": "media",
+          "fields": [
+            {
+              "label": "Тип носителя",
+              "required": true,
+              "defaultSource": "manual",
+              "target": {
+                "objectKind": "hw_element",
+                "indicatorTypes": [
+                  "media_type"
+                ]
+              }
+            },
+            {
+              "label": "Объём",
+              "required": true,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "hw_element",
+                "indicatorTypes": [
+                  "capacity_bytes"
+                ]
+              }
+            },
+            {
+              "label": "Производитель и серийный номер",
+              "required": false,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "hw_element",
+                "indicatorTypes": [
+                  "manufacturer",
+                  "serial",
+                  "sd_cid"
+                ]
+              }
+            },
+            {
+              "label": "Разметка: таблица разделов, ФС, метки, PARTUUID, UUID",
+              "required": true,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "hw_element",
+                "indicatorTypes": [
+                  "partition_layout",
+                  "mbr_disk_id",
+                  "gpt_guid",
+                  "fs_uuid",
+                  "fat_serial",
+                  "fs_type"
+                ]
+              }
+            },
+            {
+              "label": "Способ снятия",
+              "required": true,
+              "defaultSource": "manual",
+              "target": {
+                "programField": "acquisitionMethod"
+              }
+            },
+            {
+              "label": "Средство снятия с версией, станция приёмки",
+              "required": true,
+              "defaultSource": "auto",
+              "target": {
+                "programField": "acquisitionTool,intakeStation"
+              }
+            },
+            {
+              "label": "Статус извлечения",
+              "required": true,
+              "defaultSource": "manual",
+              "target": {
+                "programField": "extractionStatus"
+              }
+            }
+          ]
+        },
+        {
+          "block": "class",
+          "fields": [
+            {
+              "label": "Terrain: регион, тайлы",
+              "required": false,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "geo_object",
+                "indicatorTypes": [
+                  "terrain_tile",
+                  "region_name"
+                ],
+                "link": "operates_in"
+              }
+            },
+            {
+              "label": "Логи полётов: наличие, район, время",
+              "required": false,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "geo_object",
+                "indicatorTypes": [
+                  "geo_shape"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "radio_module",
+      "subtype": "bare_media",
+      "blocks": [
+        {
+          "block": "header",
+          "fields": [
+            {
+              "label": "Класс изделия, подтип",
+              "required": true,
+              "defaultSource": "manual",
+              "target": {
+                "programField": "itemClass,itemSubtype"
+              }
+            },
+            {
+              "label": "Аппаратная платформа (плата, SoC, модель)",
+              "required": true,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "hw_element",
+                "indicatorTypes": [
+                  "hw_kind",
+                  "hw_model",
+                  "manufacturer"
+                ],
+                "link": "has_element"
+              }
+            },
+            {
+              "label": "Серийные номера, MAC, FCC ID, маркировки",
+              "required": false,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "hw_element",
+                "indicatorTypes": [
+                  "serial",
+                  "sd_cid",
+                  "mcu_uid",
+                  "mac",
+                  "fcc_id",
+                  "marking",
+                  "inventory_mark"
+                ]
+              }
+            },
+            {
+              "label": "Фото платы",
+              "required": false,
+              "defaultSource": "manual",
+              "target": {
+                "material": true
+              },
+              "note": "н, с предупреждением"
+            }
+          ]
+        },
+        {
+          "block": "media",
+          "fields": [
+            {
+              "label": "Тип носителя",
+              "required": true,
+              "defaultSource": "manual",
+              "target": {
+                "objectKind": "hw_element",
+                "indicatorTypes": [
+                  "media_type"
+                ]
+              }
+            },
+            {
+              "label": "Объём",
+              "required": true,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "hw_element",
+                "indicatorTypes": [
+                  "capacity_bytes"
+                ]
+              }
+            },
+            {
+              "label": "Производитель и серийный номер",
+              "required": false,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "hw_element",
+                "indicatorTypes": [
+                  "manufacturer",
+                  "serial",
+                  "sd_cid"
+                ]
+              }
+            },
+            {
+              "label": "Разметка: таблица разделов, ФС, метки, PARTUUID, UUID",
+              "required": true,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "hw_element",
+                "indicatorTypes": [
+                  "partition_layout",
+                  "mbr_disk_id",
+                  "gpt_guid",
+                  "fs_uuid",
+                  "fat_serial",
+                  "fs_type"
+                ]
+              }
+            },
+            {
+              "label": "Способ снятия",
+              "required": true,
+              "defaultSource": "manual",
+              "target": {
+                "programField": "acquisitionMethod"
+              }
+            },
+            {
+              "label": "Средство снятия с версией, станция приёмки",
+              "required": true,
+              "defaultSource": "auto",
+              "target": {
+                "programField": "acquisitionTool,intakeStation"
+              }
+            },
+            {
+              "label": "Статус извлечения",
+              "required": true,
+              "defaultSource": "manual",
+              "target": {
+                "programField": "extractionStatus"
+              }
+            }
+          ]
+        },
+        {
+          "block": "class",
+          "fields": [
+            {
+              "label": "Terrain: регион, тайлы",
+              "required": false,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "geo_object",
+                "indicatorTypes": [
+                  "terrain_tile",
+                  "region_name"
+                ],
+                "link": "operates_in"
+              }
+            },
+            {
+              "label": "Логи полётов: наличие, район, время",
+              "required": false,
+              "defaultSource": "auto",
+              "target": {
+                "objectKind": "geo_object",
+                "indicatorTypes": [
+                  "geo_shape"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

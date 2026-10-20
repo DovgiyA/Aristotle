@@ -1,0 +1,4430 @@
+[
+  {
+    "code": "item_class",
+    "closed": true,
+    "values": [
+      {
+        "code": "companion",
+        "label": "companion-компьютер"
+      },
+      {
+        "code": "flight_controller",
+        "label": "полётный контроллер"
+      },
+      {
+        "code": "radio_module",
+        "label": "радиомодуль",
+        "draft": true
+      }
+    ]
+  },
+  {
+    "code": "item_subtype",
+    "closed": true,
+    "values": [
+      {
+        "code": "bare_media",
+        "label": "голый носитель"
+      }
+    ]
+  },
+  {
+    "code": "case_shape",
+    "closed": true,
+    "values": [
+      {
+        "code": "airframe",
+        "label": "Борт"
+      },
+      {
+        "code": "single_item",
+        "label": "отдельное Изделие"
+      }
+    ]
+  },
+  {
+    "code": "purpose",
+    "closed": false,
+    "values": [
+      {
+        "code": "video_recon",
+        "label": "видеоразведка и трансляция видео"
+      },
+      {
+        "code": "guidance",
+        "label": "наведение и автозахват"
+      },
+      {
+        "code": "payload_drop",
+        "label": "сброс полезной нагрузки"
+      },
+      {
+        "code": "ew",
+        "label": "РЭБ и РЭР"
+      },
+      {
+        "code": "comms_relay",
+        "label": "ретрансляция связи"
+      },
+      {
+        "code": "mission_control",
+        "label": "управление миссией"
+      },
+      {
+        "code": "other",
+        "label": "иное"
+      }
+    ]
+  },
+  {
+    "code": "hw_kind",
+    "closed": false,
+    "values": [
+      {
+        "code": "storage",
+        "label": "носитель"
+      },
+      {
+        "code": "sbc",
+        "label": "одноплатный компьютер"
+      },
+      {
+        "code": "flight_controller",
+        "label": "полётный контроллер"
+      },
+      {
+        "code": "mcu_soc",
+        "label": "микроконтроллер, SoC"
+      },
+      {
+        "code": "radio_modem",
+        "label": "радиомодуль, модем"
+      },
+      {
+        "code": "camera",
+        "label": "камера"
+      },
+      {
+        "code": "gnss",
+        "label": "GNSS-приёмник"
+      },
+      {
+        "code": "satcom",
+        "label": "спутниковый терминал"
+      },
+      {
+        "code": "hub_switch",
+        "label": "хаб, коммутатор"
+      },
+      {
+        "code": "antenna",
+        "label": "антенна"
+      },
+      {
+        "code": "power",
+        "label": "питание"
+      },
+      {
+        "code": "other",
+        "label": "иное"
+      }
+    ]
+  },
+  {
+    "code": "media_type",
+    "closed": false,
+    "values": [
+      {
+        "code": "microsd",
+        "label": "microSD"
+      },
+      {
+        "code": "sd",
+        "label": "SD"
+      },
+      {
+        "code": "usb_flash",
+        "label": "USB-накопитель"
+      },
+      {
+        "code": "emmc",
+        "label": "eMMC"
+      },
+      {
+        "code": "ssd_hdd",
+        "label": "SSD/HDD"
+      },
+      {
+        "code": "spi_flash",
+        "label": "SPI-flash"
+      },
+      {
+        "code": "other",
+        "label": "иное"
+      }
+    ]
+  },
+  {
+    "code": "acquisition_method",
+    "closed": true,
+    "values": [
+      {
+        "code": "physical_ro",
+        "label": "побайтовый образ только на чтение"
+      },
+      {
+        "code": "logical",
+        "label": "логическая копия"
+      },
+      {
+        "code": "live_ro",
+        "label": "снятие с работающего устройства только на чтение"
+      },
+      {
+        "code": "not_acquired",
+        "label": "не снимался"
+      }
+    ]
+  },
+  {
+    "code": "extraction_status",
+    "closed": true,
+    "values": [
+      {
+        "code": "full",
+        "label": "полное"
+      },
+      {
+        "code": "partial",
+        "label": "частичное"
+      },
+      {
+        "code": "encrypted",
+        "label": "зашифровано"
+      },
+      {
+        "code": "unreadable",
+        "label": "нечитаем"
+      }
+    ]
+  },
+  {
+    "code": "material_kind",
+    "closed": true,
+    "values": [
+      {
+        "code": "image",
+        "label": "образ"
+      },
+      {
+        "code": "logical_copy",
+        "label": "логическая копия"
+      },
+      {
+        "code": "extracted_file",
+        "label": "извлечённый файл"
+      },
+      {
+        "code": "photo",
+        "label": "фото"
+      },
+      {
+        "code": "crypto_task",
+        "label": "крипто-задача"
+      },
+      {
+        "code": "legacy_file",
+        "label": "Прежний файл"
+      },
+      {
+        "code": "external_source",
+        "label": "Внешний источник"
+      }
+    ]
+  },
+  {
+    "code": "fs_type",
+    "closed": false,
+    "values": [
+      {
+        "code": "ext4",
+        "label": "ext4"
+      },
+      {
+        "code": "ext3_ext2",
+        "label": "ext3/ext2"
+      },
+      {
+        "code": "vfat",
+        "label": "vfat"
+      },
+      {
+        "code": "exfat",
+        "label": "exFAT"
+      },
+      {
+        "code": "ntfs",
+        "label": "NTFS"
+      },
+      {
+        "code": "btrfs",
+        "label": "btrfs"
+      },
+      {
+        "code": "f2fs",
+        "label": "f2fs"
+      },
+      {
+        "code": "squashfs",
+        "label": "squashfs"
+      },
+      {
+        "code": "overlay",
+        "label": "overlay"
+      },
+      {
+        "code": "other",
+        "label": "иное"
+      }
+    ]
+  },
+  {
+    "code": "os_distro",
+    "closed": false,
+    "values": [
+      {
+        "code": "raspberry_pi_os",
+        "label": "Raspberry Pi OS"
+      },
+      {
+        "code": "raspbian",
+        "label": "Raspbian"
+      },
+      {
+        "code": "dietpi",
+        "label": "DietPi"
+      },
+      {
+        "code": "debian",
+        "label": "Debian"
+      },
+      {
+        "code": "ubuntu",
+        "label": "Ubuntu"
+      },
+      {
+        "code": "armbian",
+        "label": "Armbian"
+      },
+      {
+        "code": "orange_pi_os",
+        "label": "Orange Pi OS"
+      },
+      {
+        "code": "nvidia_l4t",
+        "label": "NVIDIA L4T/JetPack"
+      },
+      {
+        "code": "buildroot",
+        "label": "Buildroot"
+      },
+      {
+        "code": "yocto",
+        "label": "Yocto"
+      },
+      {
+        "code": "openwrt",
+        "label": "OpenWrt"
+      },
+      {
+        "code": "android",
+        "label": "Android"
+      },
+      {
+        "code": "windows",
+        "label": "Windows"
+      },
+      {
+        "code": "other",
+        "label": "иное"
+      }
+    ]
+  },
+  {
+    "code": "secure_boot",
+    "closed": false,
+    "values": [
+      {
+        "code": "enabled",
+        "label": "включена"
+      },
+      {
+        "code": "disabled",
+        "label": "выключена"
+      },
+      {
+        "code": "unsupported",
+        "label": "не поддерживается"
+      },
+      {
+        "code": "not_configured",
+        "label": "не установлено"
+      }
+    ]
+  },
+  {
+    "code": "password_hash_type",
+    "closed": false,
+    "values": [
+      {
+        "code": "yescrypt",
+        "label": "yescrypt ($y$)"
+      },
+      {
+        "code": "sha512crypt",
+        "label": "sha512crypt ($6$)"
+      },
+      {
+        "code": "sha256crypt",
+        "label": "sha256crypt ($5$)"
+      },
+      {
+        "code": "md5crypt",
+        "label": "md5crypt ($1$)"
+      },
+      {
+        "code": "bcrypt",
+        "label": "bcrypt ($2b$)"
+      },
+      {
+        "code": "des",
+        "label": "DES"
+      },
+      {
+        "code": "empty",
+        "label": "пустой пароль"
+      },
+      {
+        "code": "login_disabled",
+        "label": "вход по паролю запрещён (!, *)"
+      },
+      {
+        "code": "other",
+        "label": "иное"
+      }
+    ]
+  },
+  {
+    "code": "timezone",
+    "closed": false,
+    "values": [
+      {
+        "code": "Africa/Abidjan",
+        "label": "Africa/Abidjan"
+      },
+      {
+        "code": "Africa/Accra",
+        "label": "Africa/Accra"
+      },
+      {
+        "code": "Africa/Addis_Ababa",
+        "label": "Africa/Addis_Ababa"
+      },
+      {
+        "code": "Africa/Algiers",
+        "label": "Africa/Algiers"
+      },
+      {
+        "code": "Africa/Asmara",
+        "label": "Africa/Asmara"
+      },
+      {
+        "code": "Africa/Bamako",
+        "label": "Africa/Bamako"
+      },
+      {
+        "code": "Africa/Bangui",
+        "label": "Africa/Bangui"
+      },
+      {
+        "code": "Africa/Banjul",
+        "label": "Africa/Banjul"
+      },
+      {
+        "code": "Africa/Bissau",
+        "label": "Africa/Bissau"
+      },
+      {
+        "code": "Africa/Blantyre",
+        "label": "Africa/Blantyre"
+      },
+      {
+        "code": "Africa/Brazzaville",
+        "label": "Africa/Brazzaville"
+      },
+      {
+        "code": "Africa/Bujumbura",
+        "label": "Africa/Bujumbura"
+      },
+      {
+        "code": "Africa/Cairo",
+        "label": "Africa/Cairo"
+      },
+      {
+        "code": "Africa/Casablanca",
+        "label": "Africa/Casablanca"
+      },
+      {
+        "code": "Africa/Ceuta",
+        "label": "Africa/Ceuta"
+      },
+      {
+        "code": "Africa/Conakry",
+        "label": "Africa/Conakry"
+      },
+      {
+        "code": "Africa/Dakar",
+        "label": "Africa/Dakar"
+      },
+      {
+        "code": "Africa/Dar_es_Salaam",
+        "label": "Africa/Dar_es_Salaam"
+      },
+      {
+        "code": "Africa/Djibouti",
+        "label": "Africa/Djibouti"
+      },
+      {
+        "code": "Africa/Douala",
+        "label": "Africa/Douala"
+      },
+      {
+        "code": "Africa/El_Aaiun",
+        "label": "Africa/El_Aaiun"
+      },
+      {
+        "code": "Africa/Freetown",
+        "label": "Africa/Freetown"
+      },
+      {
+        "code": "Africa/Gaborone",
+        "label": "Africa/Gaborone"
+      },
+      {
+        "code": "Africa/Harare",
+        "label": "Africa/Harare"
+      },
+      {
+        "code": "Africa/Johannesburg",
+        "label": "Africa/Johannesburg"
+      },
+      {
+        "code": "Africa/Juba",
+        "label": "Africa/Juba"
+      },
+      {
+        "code": "Africa/Kampala",
+        "label": "Africa/Kampala"
+      },
+      {
+        "code": "Africa/Khartoum",
+        "label": "Africa/Khartoum"
+      },
+      {
+        "code": "Africa/Kigali",
+        "label": "Africa/Kigali"
+      },
+      {
+        "code": "Africa/Kinshasa",
+        "label": "Africa/Kinshasa"
+      },
+      {
+        "code": "Africa/Lagos",
+        "label": "Africa/Lagos"
+      },
+      {
+        "code": "Africa/Libreville",
+        "label": "Africa/Libreville"
+      },
+      {
+        "code": "Africa/Lome",
+        "label": "Africa/Lome"
+      },
+      {
+        "code": "Africa/Luanda",
+        "label": "Africa/Luanda"
+      },
+      {
+        "code": "Africa/Lubumbashi",
+        "label": "Africa/Lubumbashi"
+      },
+      {
+        "code": "Africa/Lusaka",
+        "label": "Africa/Lusaka"
+      },
+      {
+        "code": "Africa/Malabo",
+        "label": "Africa/Malabo"
+      },
+      {
+        "code": "Africa/Maputo",
+        "label": "Africa/Maputo"
+      },
+      {
+        "code": "Africa/Maseru",
+        "label": "Africa/Maseru"
+      },
+      {
+        "code": "Africa/Mbabane",
+        "label": "Africa/Mbabane"
+      },
+      {
+        "code": "Africa/Mogadishu",
+        "label": "Africa/Mogadishu"
+      },
+      {
+        "code": "Africa/Monrovia",
+        "label": "Africa/Monrovia"
+      },
+      {
+        "code": "Africa/Nairobi",
+        "label": "Africa/Nairobi"
+      },
+      {
+        "code": "Africa/Ndjamena",
+        "label": "Africa/Ndjamena"
+      },
+      {
+        "code": "Africa/Niamey",
+        "label": "Africa/Niamey"
+      },
+      {
+        "code": "Africa/Nouakchott",
+        "label": "Africa/Nouakchott"
+      },
+      {
+        "code": "Africa/Ouagadougou",
+        "label": "Africa/Ouagadougou"
+      },
+      {
+        "code": "Africa/Porto-Novo",
+        "label": "Africa/Porto-Novo"
+      },
+      {
+        "code": "Africa/Sao_Tome",
+        "label": "Africa/Sao_Tome"
+      },
+      {
+        "code": "Africa/Tripoli",
+        "label": "Africa/Tripoli"
+      },
+      {
+        "code": "Africa/Tunis",
+        "label": "Africa/Tunis"
+      },
+      {
+        "code": "Africa/Windhoek",
+        "label": "Africa/Windhoek"
+      },
+      {
+        "code": "America/Adak",
+        "label": "America/Adak"
+      },
+      {
+        "code": "America/Anchorage",
+        "label": "America/Anchorage"
+      },
+      {
+        "code": "America/Anguilla",
+        "label": "America/Anguilla"
+      },
+      {
+        "code": "America/Antigua",
+        "label": "America/Antigua"
+      },
+      {
+        "code": "America/Araguaina",
+        "label": "America/Araguaina"
+      },
+      {
+        "code": "America/Argentina/Buenos_Aires",
+        "label": "America/Argentina/Buenos_Aires"
+      },
+      {
+        "code": "America/Argentina/Catamarca",
+        "label": "America/Argentina/Catamarca"
+      },
+      {
+        "code": "America/Argentina/Cordoba",
+        "label": "America/Argentina/Cordoba"
+      },
+      {
+        "code": "America/Argentina/Jujuy",
+        "label": "America/Argentina/Jujuy"
+      },
+      {
+        "code": "America/Argentina/La_Rioja",
+        "label": "America/Argentina/La_Rioja"
+      },
+      {
+        "code": "America/Argentina/Mendoza",
+        "label": "America/Argentina/Mendoza"
+      },
+      {
+        "code": "America/Argentina/Rio_Gallegos",
+        "label": "America/Argentina/Rio_Gallegos"
+      },
+      {
+        "code": "America/Argentina/Salta",
+        "label": "America/Argentina/Salta"
+      },
+      {
+        "code": "America/Argentina/San_Juan",
+        "label": "America/Argentina/San_Juan"
+      },
+      {
+        "code": "America/Argentina/San_Luis",
+        "label": "America/Argentina/San_Luis"
+      },
+      {
+        "code": "America/Argentina/Tucuman",
+        "label": "America/Argentina/Tucuman"
+      },
+      {
+        "code": "America/Argentina/Ushuaia",
+        "label": "America/Argentina/Ushuaia"
+      },
+      {
+        "code": "America/Aruba",
+        "label": "America/Aruba"
+      },
+      {
+        "code": "America/Asuncion",
+        "label": "America/Asuncion"
+      },
+      {
+        "code": "America/Atikokan",
+        "label": "America/Atikokan"
+      },
+      {
+        "code": "America/Bahia",
+        "label": "America/Bahia"
+      },
+      {
+        "code": "America/Bahia_Banderas",
+        "label": "America/Bahia_Banderas"
+      },
+      {
+        "code": "America/Barbados",
+        "label": "America/Barbados"
+      },
+      {
+        "code": "America/Belem",
+        "label": "America/Belem"
+      },
+      {
+        "code": "America/Belize",
+        "label": "America/Belize"
+      },
+      {
+        "code": "America/Blanc-Sablon",
+        "label": "America/Blanc-Sablon"
+      },
+      {
+        "code": "America/Boa_Vista",
+        "label": "America/Boa_Vista"
+      },
+      {
+        "code": "America/Bogota",
+        "label": "America/Bogota"
+      },
+      {
+        "code": "America/Boise",
+        "label": "America/Boise"
+      },
+      {
+        "code": "America/Cambridge_Bay",
+        "label": "America/Cambridge_Bay"
+      },
+      {
+        "code": "America/Campo_Grande",
+        "label": "America/Campo_Grande"
+      },
+      {
+        "code": "America/Cancun",
+        "label": "America/Cancun"
+      },
+      {
+        "code": "America/Caracas",
+        "label": "America/Caracas"
+      },
+      {
+        "code": "America/Cayenne",
+        "label": "America/Cayenne"
+      },
+      {
+        "code": "America/Cayman",
+        "label": "America/Cayman"
+      },
+      {
+        "code": "America/Chicago",
+        "label": "America/Chicago"
+      },
+      {
+        "code": "America/Chihuahua",
+        "label": "America/Chihuahua"
+      },
+      {
+        "code": "America/Ciudad_Juarez",
+        "label": "America/Ciudad_Juarez"
+      },
+      {
+        "code": "America/Costa_Rica",
+        "label": "America/Costa_Rica"
+      },
+      {
+        "code": "America/Coyhaique",
+        "label": "America/Coyhaique"
+      },
+      {
+        "code": "America/Creston",
+        "label": "America/Creston"
+      },
+      {
+        "code": "America/Cuiaba",
+        "label": "America/Cuiaba"
+      },
+      {
+        "code": "America/Curacao",
+        "label": "America/Curacao"
+      },
+      {
+        "code": "America/Danmarkshavn",
+        "label": "America/Danmarkshavn"
+      },
+      {
+        "code": "America/Dawson",
+        "label": "America/Dawson"
+      },
+      {
+        "code": "America/Dawson_Creek",
+        "label": "America/Dawson_Creek"
+      },
+      {
+        "code": "America/Denver",
+        "label": "America/Denver"
+      },
+      {
+        "code": "America/Detroit",
+        "label": "America/Detroit"
+      },
+      {
+        "code": "America/Dominica",
+        "label": "America/Dominica"
+      },
+      {
+        "code": "America/Edmonton",
+        "label": "America/Edmonton"
+      },
+      {
+        "code": "America/Eirunepe",
+        "label": "America/Eirunepe"
+      },
+      {
+        "code": "America/El_Salvador",
+        "label": "America/El_Salvador"
+      },
+      {
+        "code": "America/Fort_Nelson",
+        "label": "America/Fort_Nelson"
+      },
+      {
+        "code": "America/Fortaleza",
+        "label": "America/Fortaleza"
+      },
+      {
+        "code": "America/Glace_Bay",
+        "label": "America/Glace_Bay"
+      },
+      {
+        "code": "America/Goose_Bay",
+        "label": "America/Goose_Bay"
+      },
+      {
+        "code": "America/Grand_Turk",
+        "label": "America/Grand_Turk"
+      },
+      {
+        "code": "America/Grenada",
+        "label": "America/Grenada"
+      },
+      {
+        "code": "America/Guadeloupe",
+        "label": "America/Guadeloupe"
+      },
+      {
+        "code": "America/Guatemala",
+        "label": "America/Guatemala"
+      },
+      {
+        "code": "America/Guayaquil",
+        "label": "America/Guayaquil"
+      },
+      {
+        "code": "America/Guyana",
+        "label": "America/Guyana"
+      },
+      {
+        "code": "America/Halifax",
+        "label": "America/Halifax"
+      },
+      {
+        "code": "America/Havana",
+        "label": "America/Havana"
+      },
+      {
+        "code": "America/Hermosillo",
+        "label": "America/Hermosillo"
+      },
+      {
+        "code": "America/Indiana/Indianapolis",
+        "label": "America/Indiana/Indianapolis"
+      },
+      {
+        "code": "America/Indiana/Knox",
+        "label": "America/Indiana/Knox"
+      },
+      {
+        "code": "America/Indiana/Marengo",
+        "label": "America/Indiana/Marengo"
+      },
+      {
+        "code": "America/Indiana/Petersburg",
+        "label": "America/Indiana/Petersburg"
+      },
+      {
+        "code": "America/Indiana/Tell_City",
+        "label": "America/Indiana/Tell_City"
+      },
+      {
+        "code": "America/Indiana/Vevay",
+        "label": "America/Indiana/Vevay"
+      },
+      {
+        "code": "America/Indiana/Vincennes",
+        "label": "America/Indiana/Vincennes"
+      },
+      {
+        "code": "America/Indiana/Winamac",
+        "label": "America/Indiana/Winamac"
+      },
+      {
+        "code": "America/Inuvik",
+        "label": "America/Inuvik"
+      },
+      {
+        "code": "America/Iqaluit",
+        "label": "America/Iqaluit"
+      },
+      {
+        "code": "America/Jamaica",
+        "label": "America/Jamaica"
+      },
+      {
+        "code": "America/Juneau",
+        "label": "America/Juneau"
+      },
+      {
+        "code": "America/Kentucky/Louisville",
+        "label": "America/Kentucky/Louisville"
+      },
+      {
+        "code": "America/Kentucky/Monticello",
+        "label": "America/Kentucky/Monticello"
+      },
+      {
+        "code": "America/Kralendijk",
+        "label": "America/Kralendijk"
+      },
+      {
+        "code": "America/La_Paz",
+        "label": "America/La_Paz"
+      },
+      {
+        "code": "America/Lima",
+        "label": "America/Lima"
+      },
+      {
+        "code": "America/Los_Angeles",
+        "label": "America/Los_Angeles"
+      },
+      {
+        "code": "America/Lower_Princes",
+        "label": "America/Lower_Princes"
+      },
+      {
+        "code": "America/Maceio",
+        "label": "America/Maceio"
+      },
+      {
+        "code": "America/Managua",
+        "label": "America/Managua"
+      },
+      {
+        "code": "America/Manaus",
+        "label": "America/Manaus"
+      },
+      {
+        "code": "America/Marigot",
+        "label": "America/Marigot"
+      },
+      {
+        "code": "America/Martinique",
+        "label": "America/Martinique"
+      },
+      {
+        "code": "America/Matamoros",
+        "label": "America/Matamoros"
+      },
+      {
+        "code": "America/Mazatlan",
+        "label": "America/Mazatlan"
+      },
+      {
+        "code": "America/Menominee",
+        "label": "America/Menominee"
+      },
+      {
+        "code": "America/Merida",
+        "label": "America/Merida"
+      },
+      {
+        "code": "America/Metlakatla",
+        "label": "America/Metlakatla"
+      },
+      {
+        "code": "America/Mexico_City",
+        "label": "America/Mexico_City"
+      },
+      {
+        "code": "America/Miquelon",
+        "label": "America/Miquelon"
+      },
+      {
+        "code": "America/Moncton",
+        "label": "America/Moncton"
+      },
+      {
+        "code": "America/Monterrey",
+        "label": "America/Monterrey"
+      },
+      {
+        "code": "America/Montevideo",
+        "label": "America/Montevideo"
+      },
+      {
+        "code": "America/Montserrat",
+        "label": "America/Montserrat"
+      },
+      {
+        "code": "America/Nassau",
+        "label": "America/Nassau"
+      },
+      {
+        "code": "America/New_York",
+        "label": "America/New_York"
+      },
+      {
+        "code": "America/Nome",
+        "label": "America/Nome"
+      },
+      {
+        "code": "America/Noronha",
+        "label": "America/Noronha"
+      },
+      {
+        "code": "America/North_Dakota/Beulah",
+        "label": "America/North_Dakota/Beulah"
+      },
+      {
+        "code": "America/North_Dakota/Center",
+        "label": "America/North_Dakota/Center"
+      },
+      {
+        "code": "America/North_Dakota/New_Salem",
+        "label": "America/North_Dakota/New_Salem"
+      },
+      {
+        "code": "America/Nuuk",
+        "label": "America/Nuuk"
+      },
+      {
+        "code": "America/Ojinaga",
+        "label": "America/Ojinaga"
+      },
+      {
+        "code": "America/Panama",
+        "label": "America/Panama"
+      },
+      {
+        "code": "America/Paramaribo",
+        "label": "America/Paramaribo"
+      },
+      {
+        "code": "America/Phoenix",
+        "label": "America/Phoenix"
+      },
+      {
+        "code": "America/Port-au-Prince",
+        "label": "America/Port-au-Prince"
+      },
+      {
+        "code": "America/Port_of_Spain",
+        "label": "America/Port_of_Spain"
+      },
+      {
+        "code": "America/Porto_Velho",
+        "label": "America/Porto_Velho"
+      },
+      {
+        "code": "America/Puerto_Rico",
+        "label": "America/Puerto_Rico"
+      },
+      {
+        "code": "America/Punta_Arenas",
+        "label": "America/Punta_Arenas"
+      },
+      {
+        "code": "America/Rankin_Inlet",
+        "label": "America/Rankin_Inlet"
+      },
+      {
+        "code": "America/Recife",
+        "label": "America/Recife"
+      },
+      {
+        "code": "America/Regina",
+        "label": "America/Regina"
+      },
+      {
+        "code": "America/Resolute",
+        "label": "America/Resolute"
+      },
+      {
+        "code": "America/Rio_Branco",
+        "label": "America/Rio_Branco"
+      },
+      {
+        "code": "America/Santarem",
+        "label": "America/Santarem"
+      },
+      {
+        "code": "America/Santiago",
+        "label": "America/Santiago"
+      },
+      {
+        "code": "America/Santo_Domingo",
+        "label": "America/Santo_Domingo"
+      },
+      {
+        "code": "America/Sao_Paulo",
+        "label": "America/Sao_Paulo"
+      },
+      {
+        "code": "America/Scoresbysund",
+        "label": "America/Scoresbysund"
+      },
+      {
+        "code": "America/Sitka",
+        "label": "America/Sitka"
+      },
+      {
+        "code": "America/St_Barthelemy",
+        "label": "America/St_Barthelemy"
+      },
+      {
+        "code": "America/St_Johns",
+        "label": "America/St_Johns"
+      },
+      {
+        "code": "America/St_Kitts",
+        "label": "America/St_Kitts"
+      },
+      {
+        "code": "America/St_Lucia",
+        "label": "America/St_Lucia"
+      },
+      {
+        "code": "America/St_Thomas",
+        "label": "America/St_Thomas"
+      },
+      {
+        "code": "America/St_Vincent",
+        "label": "America/St_Vincent"
+      },
+      {
+        "code": "America/Swift_Current",
+        "label": "America/Swift_Current"
+      },
+      {
+        "code": "America/Tegucigalpa",
+        "label": "America/Tegucigalpa"
+      },
+      {
+        "code": "America/Thule",
+        "label": "America/Thule"
+      },
+      {
+        "code": "America/Tijuana",
+        "label": "America/Tijuana"
+      },
+      {
+        "code": "America/Toronto",
+        "label": "America/Toronto"
+      },
+      {
+        "code": "America/Tortola",
+        "label": "America/Tortola"
+      },
+      {
+        "code": "America/Vancouver",
+        "label": "America/Vancouver"
+      },
+      {
+        "code": "America/Whitehorse",
+        "label": "America/Whitehorse"
+      },
+      {
+        "code": "America/Winnipeg",
+        "label": "America/Winnipeg"
+      },
+      {
+        "code": "America/Yakutat",
+        "label": "America/Yakutat"
+      },
+      {
+        "code": "Antarctica/Casey",
+        "label": "Antarctica/Casey"
+      },
+      {
+        "code": "Antarctica/Davis",
+        "label": "Antarctica/Davis"
+      },
+      {
+        "code": "Antarctica/DumontDUrville",
+        "label": "Antarctica/DumontDUrville"
+      },
+      {
+        "code": "Antarctica/Macquarie",
+        "label": "Antarctica/Macquarie"
+      },
+      {
+        "code": "Antarctica/Mawson",
+        "label": "Antarctica/Mawson"
+      },
+      {
+        "code": "Antarctica/McMurdo",
+        "label": "Antarctica/McMurdo"
+      },
+      {
+        "code": "Antarctica/Palmer",
+        "label": "Antarctica/Palmer"
+      },
+      {
+        "code": "Antarctica/Rothera",
+        "label": "Antarctica/Rothera"
+      },
+      {
+        "code": "Antarctica/Syowa",
+        "label": "Antarctica/Syowa"
+      },
+      {
+        "code": "Antarctica/Troll",
+        "label": "Antarctica/Troll"
+      },
+      {
+        "code": "Antarctica/Vostok",
+        "label": "Antarctica/Vostok"
+      },
+      {
+        "code": "Arctic/Longyearbyen",
+        "label": "Arctic/Longyearbyen"
+      },
+      {
+        "code": "Asia/Aden",
+        "label": "Asia/Aden"
+      },
+      {
+        "code": "Asia/Almaty",
+        "label": "Asia/Almaty"
+      },
+      {
+        "code": "Asia/Amman",
+        "label": "Asia/Amman"
+      },
+      {
+        "code": "Asia/Anadyr",
+        "label": "Asia/Anadyr"
+      },
+      {
+        "code": "Asia/Aqtau",
+        "label": "Asia/Aqtau"
+      },
+      {
+        "code": "Asia/Aqtobe",
+        "label": "Asia/Aqtobe"
+      },
+      {
+        "code": "Asia/Ashgabat",
+        "label": "Asia/Ashgabat"
+      },
+      {
+        "code": "Asia/Atyrau",
+        "label": "Asia/Atyrau"
+      },
+      {
+        "code": "Asia/Baghdad",
+        "label": "Asia/Baghdad"
+      },
+      {
+        "code": "Asia/Bahrain",
+        "label": "Asia/Bahrain"
+      },
+      {
+        "code": "Asia/Baku",
+        "label": "Asia/Baku"
+      },
+      {
+        "code": "Asia/Bangkok",
+        "label": "Asia/Bangkok"
+      },
+      {
+        "code": "Asia/Barnaul",
+        "label": "Asia/Barnaul"
+      },
+      {
+        "code": "Asia/Beirut",
+        "label": "Asia/Beirut"
+      },
+      {
+        "code": "Asia/Bishkek",
+        "label": "Asia/Bishkek"
+      },
+      {
+        "code": "Asia/Brunei",
+        "label": "Asia/Brunei"
+      },
+      {
+        "code": "Asia/Chita",
+        "label": "Asia/Chita"
+      },
+      {
+        "code": "Asia/Colombo",
+        "label": "Asia/Colombo"
+      },
+      {
+        "code": "Asia/Damascus",
+        "label": "Asia/Damascus"
+      },
+      {
+        "code": "Asia/Dhaka",
+        "label": "Asia/Dhaka"
+      },
+      {
+        "code": "Asia/Dili",
+        "label": "Asia/Dili"
+      },
+      {
+        "code": "Asia/Dubai",
+        "label": "Asia/Dubai"
+      },
+      {
+        "code": "Asia/Dushanbe",
+        "label": "Asia/Dushanbe"
+      },
+      {
+        "code": "Asia/Famagusta",
+        "label": "Asia/Famagusta"
+      },
+      {
+        "code": "Asia/Gaza",
+        "label": "Asia/Gaza"
+      },
+      {
+        "code": "Asia/Hebron",
+        "label": "Asia/Hebron"
+      },
+      {
+        "code": "Asia/Ho_Chi_Minh",
+        "label": "Asia/Ho_Chi_Minh"
+      },
+      {
+        "code": "Asia/Hong_Kong",
+        "label": "Asia/Hong_Kong"
+      },
+      {
+        "code": "Asia/Hovd",
+        "label": "Asia/Hovd"
+      },
+      {
+        "code": "Asia/Irkutsk",
+        "label": "Asia/Irkutsk"
+      },
+      {
+        "code": "Asia/Jakarta",
+        "label": "Asia/Jakarta"
+      },
+      {
+        "code": "Asia/Jayapura",
+        "label": "Asia/Jayapura"
+      },
+      {
+        "code": "Asia/Jerusalem",
+        "label": "Asia/Jerusalem"
+      },
+      {
+        "code": "Asia/Kabul",
+        "label": "Asia/Kabul"
+      },
+      {
+        "code": "Asia/Kamchatka",
+        "label": "Asia/Kamchatka"
+      },
+      {
+        "code": "Asia/Karachi",
+        "label": "Asia/Karachi"
+      },
+      {
+        "code": "Asia/Kathmandu",
+        "label": "Asia/Kathmandu"
+      },
+      {
+        "code": "Asia/Khandyga",
+        "label": "Asia/Khandyga"
+      },
+      {
+        "code": "Asia/Kolkata",
+        "label": "Asia/Kolkata"
+      },
+      {
+        "code": "Asia/Krasnoyarsk",
+        "label": "Asia/Krasnoyarsk"
+      },
+      {
+        "code": "Asia/Kuala_Lumpur",
+        "label": "Asia/Kuala_Lumpur"
+      },
+      {
+        "code": "Asia/Kuching",
+        "label": "Asia/Kuching"
+      },
+      {
+        "code": "Asia/Kuwait",
+        "label": "Asia/Kuwait"
+      },
+      {
+        "code": "Asia/Macau",
+        "label": "Asia/Macau"
+      },
+      {
+        "code": "Asia/Magadan",
+        "label": "Asia/Magadan"
+      },
+      {
+        "code": "Asia/Makassar",
+        "label": "Asia/Makassar"
+      },
+      {
+        "code": "Asia/Manila",
+        "label": "Asia/Manila"
+      },
+      {
+        "code": "Asia/Muscat",
+        "label": "Asia/Muscat"
+      },
+      {
+        "code": "Asia/Nicosia",
+        "label": "Asia/Nicosia"
+      },
+      {
+        "code": "Asia/Novokuznetsk",
+        "label": "Asia/Novokuznetsk"
+      },
+      {
+        "code": "Asia/Novosibirsk",
+        "label": "Asia/Novosibirsk"
+      },
+      {
+        "code": "Asia/Omsk",
+        "label": "Asia/Omsk"
+      },
+      {
+        "code": "Asia/Oral",
+        "label": "Asia/Oral"
+      },
+      {
+        "code": "Asia/Phnom_Penh",
+        "label": "Asia/Phnom_Penh"
+      },
+      {
+        "code": "Asia/Pontianak",
+        "label": "Asia/Pontianak"
+      },
+      {
+        "code": "Asia/Pyongyang",
+        "label": "Asia/Pyongyang"
+      },
+      {
+        "code": "Asia/Qatar",
+        "label": "Asia/Qatar"
+      },
+      {
+        "code": "Asia/Qostanay",
+        "label": "Asia/Qostanay"
+      },
+      {
+        "code": "Asia/Qyzylorda",
+        "label": "Asia/Qyzylorda"
+      },
+      {
+        "code": "Asia/Riyadh",
+        "label": "Asia/Riyadh"
+      },
+      {
+        "code": "Asia/Sakhalin",
+        "label": "Asia/Sakhalin"
+      },
+      {
+        "code": "Asia/Samarkand",
+        "label": "Asia/Samarkand"
+      },
+      {
+        "code": "Asia/Seoul",
+        "label": "Asia/Seoul"
+      },
+      {
+        "code": "Asia/Shanghai",
+        "label": "Asia/Shanghai"
+      },
+      {
+        "code": "Asia/Singapore",
+        "label": "Asia/Singapore"
+      },
+      {
+        "code": "Asia/Srednekolymsk",
+        "label": "Asia/Srednekolymsk"
+      },
+      {
+        "code": "Asia/Taipei",
+        "label": "Asia/Taipei"
+      },
+      {
+        "code": "Asia/Tashkent",
+        "label": "Asia/Tashkent"
+      },
+      {
+        "code": "Asia/Tbilisi",
+        "label": "Asia/Tbilisi"
+      },
+      {
+        "code": "Asia/Tehran",
+        "label": "Asia/Tehran"
+      },
+      {
+        "code": "Asia/Thimphu",
+        "label": "Asia/Thimphu"
+      },
+      {
+        "code": "Asia/Tokyo",
+        "label": "Asia/Tokyo"
+      },
+      {
+        "code": "Asia/Tomsk",
+        "label": "Asia/Tomsk"
+      },
+      {
+        "code": "Asia/Ulaanbaatar",
+        "label": "Asia/Ulaanbaatar"
+      },
+      {
+        "code": "Asia/Urumqi",
+        "label": "Asia/Urumqi"
+      },
+      {
+        "code": "Asia/Ust-Nera",
+        "label": "Asia/Ust-Nera"
+      },
+      {
+        "code": "Asia/Vientiane",
+        "label": "Asia/Vientiane"
+      },
+      {
+        "code": "Asia/Vladivostok",
+        "label": "Asia/Vladivostok"
+      },
+      {
+        "code": "Asia/Yakutsk",
+        "label": "Asia/Yakutsk"
+      },
+      {
+        "code": "Asia/Yangon",
+        "label": "Asia/Yangon"
+      },
+      {
+        "code": "Asia/Yekaterinburg",
+        "label": "Asia/Yekaterinburg"
+      },
+      {
+        "code": "Asia/Yerevan",
+        "label": "Asia/Yerevan"
+      },
+      {
+        "code": "Atlantic/Azores",
+        "label": "Atlantic/Azores"
+      },
+      {
+        "code": "Atlantic/Bermuda",
+        "label": "Atlantic/Bermuda"
+      },
+      {
+        "code": "Atlantic/Canary",
+        "label": "Atlantic/Canary"
+      },
+      {
+        "code": "Atlantic/Cape_Verde",
+        "label": "Atlantic/Cape_Verde"
+      },
+      {
+        "code": "Atlantic/Faroe",
+        "label": "Atlantic/Faroe"
+      },
+      {
+        "code": "Atlantic/Madeira",
+        "label": "Atlantic/Madeira"
+      },
+      {
+        "code": "Atlantic/Reykjavik",
+        "label": "Atlantic/Reykjavik"
+      },
+      {
+        "code": "Atlantic/South_Georgia",
+        "label": "Atlantic/South_Georgia"
+      },
+      {
+        "code": "Atlantic/St_Helena",
+        "label": "Atlantic/St_Helena"
+      },
+      {
+        "code": "Atlantic/Stanley",
+        "label": "Atlantic/Stanley"
+      },
+      {
+        "code": "Australia/Adelaide",
+        "label": "Australia/Adelaide"
+      },
+      {
+        "code": "Australia/Brisbane",
+        "label": "Australia/Brisbane"
+      },
+      {
+        "code": "Australia/Broken_Hill",
+        "label": "Australia/Broken_Hill"
+      },
+      {
+        "code": "Australia/Darwin",
+        "label": "Australia/Darwin"
+      },
+      {
+        "code": "Australia/Eucla",
+        "label": "Australia/Eucla"
+      },
+      {
+        "code": "Australia/Hobart",
+        "label": "Australia/Hobart"
+      },
+      {
+        "code": "Australia/Lindeman",
+        "label": "Australia/Lindeman"
+      },
+      {
+        "code": "Australia/Lord_Howe",
+        "label": "Australia/Lord_Howe"
+      },
+      {
+        "code": "Australia/Melbourne",
+        "label": "Australia/Melbourne"
+      },
+      {
+        "code": "Australia/Perth",
+        "label": "Australia/Perth"
+      },
+      {
+        "code": "Australia/Sydney",
+        "label": "Australia/Sydney"
+      },
+      {
+        "code": "Europe/Amsterdam",
+        "label": "Europe/Amsterdam"
+      },
+      {
+        "code": "Europe/Andorra",
+        "label": "Europe/Andorra"
+      },
+      {
+        "code": "Europe/Astrakhan",
+        "label": "Europe/Astrakhan"
+      },
+      {
+        "code": "Europe/Athens",
+        "label": "Europe/Athens"
+      },
+      {
+        "code": "Europe/Belgrade",
+        "label": "Europe/Belgrade"
+      },
+      {
+        "code": "Europe/Berlin",
+        "label": "Europe/Berlin"
+      },
+      {
+        "code": "Europe/Bratislava",
+        "label": "Europe/Bratislava"
+      },
+      {
+        "code": "Europe/Brussels",
+        "label": "Europe/Brussels"
+      },
+      {
+        "code": "Europe/Bucharest",
+        "label": "Europe/Bucharest"
+      },
+      {
+        "code": "Europe/Budapest",
+        "label": "Europe/Budapest"
+      },
+      {
+        "code": "Europe/Busingen",
+        "label": "Europe/Busingen"
+      },
+      {
+        "code": "Europe/Chisinau",
+        "label": "Europe/Chisinau"
+      },
+      {
+        "code": "Europe/Copenhagen",
+        "label": "Europe/Copenhagen"
+      },
+      {
+        "code": "Europe/Dublin",
+        "label": "Europe/Dublin"
+      },
+      {
+        "code": "Europe/Gibraltar",
+        "label": "Europe/Gibraltar"
+      },
+      {
+        "code": "Europe/Guernsey",
+        "label": "Europe/Guernsey"
+      },
+      {
+        "code": "Europe/Helsinki",
+        "label": "Europe/Helsinki"
+      },
+      {
+        "code": "Europe/Isle_of_Man",
+        "label": "Europe/Isle_of_Man"
+      },
+      {
+        "code": "Europe/Istanbul",
+        "label": "Europe/Istanbul"
+      },
+      {
+        "code": "Europe/Jersey",
+        "label": "Europe/Jersey"
+      },
+      {
+        "code": "Europe/Kaliningrad",
+        "label": "Europe/Kaliningrad"
+      },
+      {
+        "code": "Europe/Kirov",
+        "label": "Europe/Kirov"
+      },
+      {
+        "code": "Europe/Kyiv",
+        "label": "Europe/Kyiv"
+      },
+      {
+        "code": "Europe/Lisbon",
+        "label": "Europe/Lisbon"
+      },
+      {
+        "code": "Europe/Ljubljana",
+        "label": "Europe/Ljubljana"
+      },
+      {
+        "code": "Europe/London",
+        "label": "Europe/London"
+      },
+      {
+        "code": "Europe/Luxembourg",
+        "label": "Europe/Luxembourg"
+      },
+      {
+        "code": "Europe/Madrid",
+        "label": "Europe/Madrid"
+      },
+      {
+        "code": "Europe/Malta",
+        "label": "Europe/Malta"
+      },
+      {
+        "code": "Europe/Mariehamn",
+        "label": "Europe/Mariehamn"
+      },
+      {
+        "code": "Europe/Minsk",
+        "label": "Europe/Minsk"
+      },
+      {
+        "code": "Europe/Monaco",
+        "label": "Europe/Monaco"
+      },
+      {
+        "code": "Europe/Moscow",
+        "label": "Europe/Moscow"
+      },
+      {
+        "code": "Europe/Oslo",
+        "label": "Europe/Oslo"
+      },
+      {
+        "code": "Europe/Paris",
+        "label": "Europe/Paris"
+      },
+      {
+        "code": "Europe/Podgorica",
+        "label": "Europe/Podgorica"
+      },
+      {
+        "code": "Europe/Prague",
+        "label": "Europe/Prague"
+      },
+      {
+        "code": "Europe/Riga",
+        "label": "Europe/Riga"
+      },
+      {
+        "code": "Europe/Rome",
+        "label": "Europe/Rome"
+      },
+      {
+        "code": "Europe/Samara",
+        "label": "Europe/Samara"
+      },
+      {
+        "code": "Europe/San_Marino",
+        "label": "Europe/San_Marino"
+      },
+      {
+        "code": "Europe/Sarajevo",
+        "label": "Europe/Sarajevo"
+      },
+      {
+        "code": "Europe/Saratov",
+        "label": "Europe/Saratov"
+      },
+      {
+        "code": "Europe/Simferopol",
+        "label": "Europe/Simferopol"
+      },
+      {
+        "code": "Europe/Skopje",
+        "label": "Europe/Skopje"
+      },
+      {
+        "code": "Europe/Sofia",
+        "label": "Europe/Sofia"
+      },
+      {
+        "code": "Europe/Stockholm",
+        "label": "Europe/Stockholm"
+      },
+      {
+        "code": "Europe/Tallinn",
+        "label": "Europe/Tallinn"
+      },
+      {
+        "code": "Europe/Tirane",
+        "label": "Europe/Tirane"
+      },
+      {
+        "code": "Europe/Ulyanovsk",
+        "label": "Europe/Ulyanovsk"
+      },
+      {
+        "code": "Europe/Vaduz",
+        "label": "Europe/Vaduz"
+      },
+      {
+        "code": "Europe/Vatican",
+        "label": "Europe/Vatican"
+      },
+      {
+        "code": "Europe/Vienna",
+        "label": "Europe/Vienna"
+      },
+      {
+        "code": "Europe/Vilnius",
+        "label": "Europe/Vilnius"
+      },
+      {
+        "code": "Europe/Volgograd",
+        "label": "Europe/Volgograd"
+      },
+      {
+        "code": "Europe/Warsaw",
+        "label": "Europe/Warsaw"
+      },
+      {
+        "code": "Europe/Zagreb",
+        "label": "Europe/Zagreb"
+      },
+      {
+        "code": "Europe/Zurich",
+        "label": "Europe/Zurich"
+      },
+      {
+        "code": "Indian/Antananarivo",
+        "label": "Indian/Antananarivo"
+      },
+      {
+        "code": "Indian/Chagos",
+        "label": "Indian/Chagos"
+      },
+      {
+        "code": "Indian/Christmas",
+        "label": "Indian/Christmas"
+      },
+      {
+        "code": "Indian/Cocos",
+        "label": "Indian/Cocos"
+      },
+      {
+        "code": "Indian/Comoro",
+        "label": "Indian/Comoro"
+      },
+      {
+        "code": "Indian/Kerguelen",
+        "label": "Indian/Kerguelen"
+      },
+      {
+        "code": "Indian/Mahe",
+        "label": "Indian/Mahe"
+      },
+      {
+        "code": "Indian/Maldives",
+        "label": "Indian/Maldives"
+      },
+      {
+        "code": "Indian/Mauritius",
+        "label": "Indian/Mauritius"
+      },
+      {
+        "code": "Indian/Mayotte",
+        "label": "Indian/Mayotte"
+      },
+      {
+        "code": "Indian/Reunion",
+        "label": "Indian/Reunion"
+      },
+      {
+        "code": "Pacific/Apia",
+        "label": "Pacific/Apia"
+      },
+      {
+        "code": "Pacific/Auckland",
+        "label": "Pacific/Auckland"
+      },
+      {
+        "code": "Pacific/Bougainville",
+        "label": "Pacific/Bougainville"
+      },
+      {
+        "code": "Pacific/Chatham",
+        "label": "Pacific/Chatham"
+      },
+      {
+        "code": "Pacific/Chuuk",
+        "label": "Pacific/Chuuk"
+      },
+      {
+        "code": "Pacific/Easter",
+        "label": "Pacific/Easter"
+      },
+      {
+        "code": "Pacific/Efate",
+        "label": "Pacific/Efate"
+      },
+      {
+        "code": "Pacific/Fakaofo",
+        "label": "Pacific/Fakaofo"
+      },
+      {
+        "code": "Pacific/Fiji",
+        "label": "Pacific/Fiji"
+      },
+      {
+        "code": "Pacific/Funafuti",
+        "label": "Pacific/Funafuti"
+      },
+      {
+        "code": "Pacific/Galapagos",
+        "label": "Pacific/Galapagos"
+      },
+      {
+        "code": "Pacific/Gambier",
+        "label": "Pacific/Gambier"
+      },
+      {
+        "code": "Pacific/Guadalcanal",
+        "label": "Pacific/Guadalcanal"
+      },
+      {
+        "code": "Pacific/Guam",
+        "label": "Pacific/Guam"
+      },
+      {
+        "code": "Pacific/Honolulu",
+        "label": "Pacific/Honolulu"
+      },
+      {
+        "code": "Pacific/Kanton",
+        "label": "Pacific/Kanton"
+      },
+      {
+        "code": "Pacific/Kiritimati",
+        "label": "Pacific/Kiritimati"
+      },
+      {
+        "code": "Pacific/Kosrae",
+        "label": "Pacific/Kosrae"
+      },
+      {
+        "code": "Pacific/Kwajalein",
+        "label": "Pacific/Kwajalein"
+      },
+      {
+        "code": "Pacific/Majuro",
+        "label": "Pacific/Majuro"
+      },
+      {
+        "code": "Pacific/Marquesas",
+        "label": "Pacific/Marquesas"
+      },
+      {
+        "code": "Pacific/Midway",
+        "label": "Pacific/Midway"
+      },
+      {
+        "code": "Pacific/Nauru",
+        "label": "Pacific/Nauru"
+      },
+      {
+        "code": "Pacific/Niue",
+        "label": "Pacific/Niue"
+      },
+      {
+        "code": "Pacific/Norfolk",
+        "label": "Pacific/Norfolk"
+      },
+      {
+        "code": "Pacific/Noumea",
+        "label": "Pacific/Noumea"
+      },
+      {
+        "code": "Pacific/Pago_Pago",
+        "label": "Pacific/Pago_Pago"
+      },
+      {
+        "code": "Pacific/Palau",
+        "label": "Pacific/Palau"
+      },
+      {
+        "code": "Pacific/Pitcairn",
+        "label": "Pacific/Pitcairn"
+      },
+      {
+        "code": "Pacific/Pohnpei",
+        "label": "Pacific/Pohnpei"
+      },
+      {
+        "code": "Pacific/Port_Moresby",
+        "label": "Pacific/Port_Moresby"
+      },
+      {
+        "code": "Pacific/Rarotonga",
+        "label": "Pacific/Rarotonga"
+      },
+      {
+        "code": "Pacific/Saipan",
+        "label": "Pacific/Saipan"
+      },
+      {
+        "code": "Pacific/Tahiti",
+        "label": "Pacific/Tahiti"
+      },
+      {
+        "code": "Pacific/Tarawa",
+        "label": "Pacific/Tarawa"
+      },
+      {
+        "code": "Pacific/Tongatapu",
+        "label": "Pacific/Tongatapu"
+      },
+      {
+        "code": "Pacific/Wake",
+        "label": "Pacific/Wake"
+      },
+      {
+        "code": "Pacific/Wallis",
+        "label": "Pacific/Wallis"
+      },
+      {
+        "code": "UTC",
+        "label": "UTC"
+      }
+    ],
+    "aliases": {
+      "Africa/Accra": "Africa/Abidjan",
+      "Africa/Addis_Ababa": "Africa/Nairobi",
+      "Africa/Asmara": "Africa/Nairobi",
+      "Africa/Asmera": "Africa/Nairobi",
+      "Africa/Bamako": "Africa/Abidjan",
+      "Africa/Bangui": "Africa/Lagos",
+      "Africa/Banjul": "Africa/Abidjan",
+      "Africa/Blantyre": "Africa/Maputo",
+      "Africa/Brazzaville": "Africa/Lagos",
+      "Africa/Bujumbura": "Africa/Maputo",
+      "Africa/Conakry": "Africa/Abidjan",
+      "Africa/Dakar": "Africa/Abidjan",
+      "Africa/Dar_es_Salaam": "Africa/Nairobi",
+      "Africa/Djibouti": "Africa/Nairobi",
+      "Africa/Douala": "Africa/Lagos",
+      "Africa/Freetown": "Africa/Abidjan",
+      "Africa/Gaborone": "Africa/Maputo",
+      "Africa/Harare": "Africa/Maputo",
+      "Africa/Kampala": "Africa/Nairobi",
+      "Africa/Kigali": "Africa/Maputo",
+      "Africa/Kinshasa": "Africa/Lagos",
+      "Africa/Libreville": "Africa/Lagos",
+      "Africa/Lome": "Africa/Abidjan",
+      "Africa/Luanda": "Africa/Lagos",
+      "Africa/Lubumbashi": "Africa/Maputo",
+      "Africa/Lusaka": "Africa/Maputo",
+      "Africa/Malabo": "Africa/Lagos",
+      "Africa/Maseru": "Africa/Johannesburg",
+      "Africa/Mbabane": "Africa/Johannesburg",
+      "Africa/Mogadishu": "Africa/Nairobi",
+      "Africa/Niamey": "Africa/Lagos",
+      "Africa/Nouakchott": "Africa/Abidjan",
+      "Africa/Ouagadougou": "Africa/Abidjan",
+      "Africa/Porto-Novo": "Africa/Lagos",
+      "Africa/Timbuktu": "Africa/Abidjan",
+      "America/Anguilla": "America/Puerto_Rico",
+      "America/Antigua": "America/Puerto_Rico",
+      "America/Argentina/ComodRivadavia": "America/Argentina/Catamarca",
+      "America/Aruba": "America/Puerto_Rico",
+      "America/Atikokan": "America/Panama",
+      "America/Atka": "America/Adak",
+      "America/Blanc-Sablon": "America/Puerto_Rico",
+      "America/Buenos_Aires": "America/Argentina/Buenos_Aires",
+      "America/Catamarca": "America/Argentina/Catamarca",
+      "America/Cayman": "America/Panama",
+      "America/Coral_Harbour": "America/Panama",
+      "America/Cordoba": "America/Argentina/Cordoba",
+      "America/Creston": "America/Phoenix",
+      "America/Curacao": "America/Puerto_Rico",
+      "America/Dominica": "America/Puerto_Rico",
+      "America/Ensenada": "America/Tijuana",
+      "America/Fort_Wayne": "America/Indiana/Indianapolis",
+      "America/Godthab": "America/Nuuk",
+      "America/Grenada": "America/Puerto_Rico",
+      "America/Guadeloupe": "America/Puerto_Rico",
+      "America/Indianapolis": "America/Indiana/Indianapolis",
+      "America/Jujuy": "America/Argentina/Jujuy",
+      "America/Knox_IN": "America/Indiana/Knox",
+      "America/Kralendijk": "America/Puerto_Rico",
+      "America/Louisville": "America/Kentucky/Louisville",
+      "America/Lower_Princes": "America/Puerto_Rico",
+      "America/Marigot": "America/Puerto_Rico",
+      "America/Mendoza": "America/Argentina/Mendoza",
+      "America/Montreal": "America/Toronto",
+      "America/Montserrat": "America/Puerto_Rico",
+      "America/Nassau": "America/Toronto",
+      "America/Nipigon": "America/Toronto",
+      "America/Pangnirtung": "America/Iqaluit",
+      "America/Port_of_Spain": "America/Puerto_Rico",
+      "America/Porto_Acre": "America/Rio_Branco",
+      "America/Rainy_River": "America/Winnipeg",
+      "America/Rosario": "America/Argentina/Cordoba",
+      "America/Santa_Isabel": "America/Tijuana",
+      "America/Shiprock": "America/Denver",
+      "America/St_Barthelemy": "America/Puerto_Rico",
+      "America/St_Kitts": "America/Puerto_Rico",
+      "America/St_Lucia": "America/Puerto_Rico",
+      "America/St_Thomas": "America/Puerto_Rico",
+      "America/St_Vincent": "America/Puerto_Rico",
+      "America/Thunder_Bay": "America/Toronto",
+      "America/Tortola": "America/Puerto_Rico",
+      "America/Virgin": "America/Puerto_Rico",
+      "America/Yellowknife": "America/Edmonton",
+      "Antarctica/DumontDUrville": "Pacific/Port_Moresby",
+      "Antarctica/McMurdo": "Pacific/Auckland",
+      "Antarctica/South_Pole": "Pacific/Auckland",
+      "Antarctica/Syowa": "Asia/Riyadh",
+      "Arctic/Longyearbyen": "Europe/Berlin",
+      "Asia/Aden": "Asia/Riyadh",
+      "Asia/Ashkhabad": "Asia/Ashgabat",
+      "Asia/Bahrain": "Asia/Qatar",
+      "Asia/Brunei": "Asia/Kuching",
+      "Asia/Calcutta": "Asia/Kolkata",
+      "Asia/Choibalsan": "Asia/Ulaanbaatar",
+      "Asia/Chongqing": "Asia/Shanghai",
+      "Asia/Chungking": "Asia/Shanghai",
+      "Asia/Dacca": "Asia/Dhaka",
+      "Asia/Harbin": "Asia/Shanghai",
+      "Asia/Istanbul": "Europe/Istanbul",
+      "Asia/Kashgar": "Asia/Urumqi",
+      "Asia/Katmandu": "Asia/Kathmandu",
+      "Asia/Kuala_Lumpur": "Asia/Singapore",
+      "Asia/Kuwait": "Asia/Riyadh",
+      "Asia/Macao": "Asia/Macau",
+      "Asia/Muscat": "Asia/Dubai",
+      "Asia/Phnom_Penh": "Asia/Bangkok",
+      "Asia/Rangoon": "Asia/Yangon",
+      "Asia/Saigon": "Asia/Ho_Chi_Minh",
+      "Asia/Tel_Aviv": "Asia/Jerusalem",
+      "Asia/Thimbu": "Asia/Thimphu",
+      "Asia/Ujung_Pandang": "Asia/Makassar",
+      "Asia/Ulan_Bator": "Asia/Ulaanbaatar",
+      "Asia/Vientiane": "Asia/Bangkok",
+      "Atlantic/Faeroe": "Atlantic/Faroe",
+      "Atlantic/Jan_Mayen": "Europe/Berlin",
+      "Atlantic/Reykjavik": "Africa/Abidjan",
+      "Atlantic/St_Helena": "Africa/Abidjan",
+      "Australia/ACT": "Australia/Sydney",
+      "Australia/Canberra": "Australia/Sydney",
+      "Australia/Currie": "Australia/Hobart",
+      "Australia/LHI": "Australia/Lord_Howe",
+      "Australia/NSW": "Australia/Sydney",
+      "Australia/North": "Australia/Darwin",
+      "Australia/Queensland": "Australia/Brisbane",
+      "Australia/South": "Australia/Adelaide",
+      "Australia/Tasmania": "Australia/Hobart",
+      "Australia/Victoria": "Australia/Melbourne",
+      "Australia/West": "Australia/Perth",
+      "Australia/Yancowinna": "Australia/Broken_Hill",
+      "Brazil/Acre": "America/Rio_Branco",
+      "Brazil/DeNoronha": "America/Noronha",
+      "Brazil/East": "America/Sao_Paulo",
+      "Brazil/West": "America/Manaus",
+      "CET": "Europe/Brussels",
+      "Canada/Atlantic": "America/Halifax",
+      "Canada/Central": "America/Winnipeg",
+      "Canada/Eastern": "America/Toronto",
+      "Canada/Mountain": "America/Edmonton",
+      "Canada/Newfoundland": "America/St_Johns",
+      "Canada/Pacific": "America/Vancouver",
+      "Canada/Saskatchewan": "America/Regina",
+      "Canada/Yukon": "America/Whitehorse",
+      "Chile/Continental": "America/Santiago",
+      "Chile/EasterIsland": "Pacific/Easter",
+      "Cuba": "America/Havana",
+      "EET": "Europe/Athens",
+      "EST": "America/Panama",
+      "Egypt": "Africa/Cairo",
+      "Eire": "Europe/Dublin",
+      "Europe/Amsterdam": "Europe/Brussels",
+      "Europe/Belfast": "Europe/London",
+      "Europe/Bratislava": "Europe/Prague",
+      "Europe/Busingen": "Europe/Zurich",
+      "Europe/Copenhagen": "Europe/Berlin",
+      "Europe/Guernsey": "Europe/London",
+      "Europe/Isle_of_Man": "Europe/London",
+      "Europe/Jersey": "Europe/London",
+      "Europe/Kiev": "Europe/Kyiv",
+      "Europe/Ljubljana": "Europe/Belgrade",
+      "Europe/Luxembourg": "Europe/Brussels",
+      "Europe/Mariehamn": "Europe/Helsinki",
+      "Europe/Monaco": "Europe/Paris",
+      "Europe/Nicosia": "Asia/Nicosia",
+      "Europe/Oslo": "Europe/Berlin",
+      "Europe/Podgorica": "Europe/Belgrade",
+      "Europe/San_Marino": "Europe/Rome",
+      "Europe/Sarajevo": "Europe/Belgrade",
+      "Europe/Skopje": "Europe/Belgrade",
+      "Europe/Stockholm": "Europe/Berlin",
+      "Europe/Tiraspol": "Europe/Chisinau",
+      "Europe/Uzhgorod": "Europe/Kyiv",
+      "Europe/Vaduz": "Europe/Zurich",
+      "Europe/Vatican": "Europe/Rome",
+      "Europe/Zagreb": "Europe/Belgrade",
+      "Europe/Zaporozhye": "Europe/Kyiv",
+      "GB": "Europe/London",
+      "GB-Eire": "Europe/London",
+      "HST": "Pacific/Honolulu",
+      "Hongkong": "Asia/Hong_Kong",
+      "Iceland": "Africa/Abidjan",
+      "Indian/Antananarivo": "Africa/Nairobi",
+      "Indian/Christmas": "Asia/Bangkok",
+      "Indian/Cocos": "Asia/Yangon",
+      "Indian/Comoro": "Africa/Nairobi",
+      "Indian/Kerguelen": "Indian/Maldives",
+      "Indian/Mahe": "Asia/Dubai",
+      "Indian/Mayotte": "Africa/Nairobi",
+      "Indian/Reunion": "Asia/Dubai",
+      "Iran": "Asia/Tehran",
+      "Israel": "Asia/Jerusalem",
+      "Jamaica": "America/Jamaica",
+      "Japan": "Asia/Tokyo",
+      "Kwajalein": "Pacific/Kwajalein",
+      "Libya": "Africa/Tripoli",
+      "MET": "Europe/Brussels",
+      "MST": "America/Phoenix",
+      "Mexico/BajaNorte": "America/Tijuana",
+      "Mexico/BajaSur": "America/Mazatlan",
+      "Mexico/General": "America/Mexico_City",
+      "NZ": "Pacific/Auckland",
+      "NZ-CHAT": "Pacific/Chatham",
+      "Navajo": "America/Denver",
+      "PRC": "Asia/Shanghai",
+      "Pacific/Chuuk": "Pacific/Port_Moresby",
+      "Pacific/Enderbury": "Pacific/Kanton",
+      "Pacific/Funafuti": "Pacific/Tarawa",
+      "Pacific/Johnston": "Pacific/Honolulu",
+      "Pacific/Majuro": "Pacific/Tarawa",
+      "Pacific/Midway": "Pacific/Pago_Pago",
+      "Pacific/Pohnpei": "Pacific/Guadalcanal",
+      "Pacific/Ponape": "Pacific/Guadalcanal",
+      "Pacific/Saipan": "Pacific/Guam",
+      "Pacific/Samoa": "Pacific/Pago_Pago",
+      "Pacific/Truk": "Pacific/Port_Moresby",
+      "Pacific/Wake": "Pacific/Tarawa",
+      "Pacific/Wallis": "Pacific/Tarawa",
+      "Pacific/Yap": "Pacific/Port_Moresby",
+      "Poland": "Europe/Warsaw",
+      "Portugal": "Europe/Lisbon",
+      "ROC": "Asia/Taipei",
+      "ROK": "Asia/Seoul",
+      "Singapore": "Asia/Singapore",
+      "Turkey": "Europe/Istanbul",
+      "US/Alaska": "America/Anchorage",
+      "US/Aleutian": "America/Adak",
+      "US/Arizona": "America/Phoenix",
+      "US/Central": "America/Chicago",
+      "US/East-Indiana": "America/Indiana/Indianapolis",
+      "US/Eastern": "America/New_York",
+      "US/Hawaii": "Pacific/Honolulu",
+      "US/Indiana-Starke": "America/Indiana/Knox",
+      "US/Michigan": "America/Detroit",
+      "US/Mountain": "America/Denver",
+      "US/Pacific": "America/Los_Angeles",
+      "US/Samoa": "Pacific/Pago_Pago",
+      "W-SU": "Europe/Moscow",
+      "WET": "Europe/Lisbon"
+    }
+  },
+  {
+    "code": "keyboard",
+    "closed": false,
+    "values": [
+      {
+        "code": "af",
+        "label": "Dari"
+      },
+      {
+        "code": "al",
+        "label": "Albanian"
+      },
+      {
+        "code": "am",
+        "label": "Armenian"
+      },
+      {
+        "code": "ara",
+        "label": "Arabic"
+      },
+      {
+        "code": "at",
+        "label": "German (Austria)"
+      },
+      {
+        "code": "au",
+        "label": "English (Australia)"
+      },
+      {
+        "code": "az",
+        "label": "Azerbaijani"
+      },
+      {
+        "code": "ba",
+        "label": "Bosnian"
+      },
+      {
+        "code": "bd",
+        "label": "Bangla"
+      },
+      {
+        "code": "be",
+        "label": "Belgian"
+      },
+      {
+        "code": "bg",
+        "label": "Bulgarian"
+      },
+      {
+        "code": "br",
+        "label": "Portuguese (Brazil)"
+      },
+      {
+        "code": "brai",
+        "label": "Braille"
+      },
+      {
+        "code": "bt",
+        "label": "Dzongkha"
+      },
+      {
+        "code": "bw",
+        "label": "Tswana"
+      },
+      {
+        "code": "by",
+        "label": "Belarusian"
+      },
+      {
+        "code": "ca",
+        "label": "French (Canada)"
+      },
+      {
+        "code": "cd",
+        "label": "French (Democratic Republic of the Congo)"
+      },
+      {
+        "code": "ch",
+        "label": "German (Switzerland)"
+      },
+      {
+        "code": "cm",
+        "label": "English (Cameroon)"
+      },
+      {
+        "code": "cn",
+        "label": "Chinese"
+      },
+      {
+        "code": "custom",
+        "label": "A user-defined custom Layout"
+      },
+      {
+        "code": "cz",
+        "label": "Czech"
+      },
+      {
+        "code": "de",
+        "label": "German"
+      },
+      {
+        "code": "dk",
+        "label": "Danish"
+      },
+      {
+        "code": "dz",
+        "label": "Berber (Algeria, Latin)"
+      },
+      {
+        "code": "ee",
+        "label": "Estonian"
+      },
+      {
+        "code": "eg",
+        "label": "Arabic (Egypt)"
+      },
+      {
+        "code": "epo",
+        "label": "Esperanto"
+      },
+      {
+        "code": "es",
+        "label": "Spanish"
+      },
+      {
+        "code": "et",
+        "label": "Amharic"
+      },
+      {
+        "code": "fi",
+        "label": "Finnish"
+      },
+      {
+        "code": "fo",
+        "label": "Faroese"
+      },
+      {
+        "code": "fr",
+        "label": "French"
+      },
+      {
+        "code": "gb",
+        "label": "English (UK)"
+      },
+      {
+        "code": "ge",
+        "label": "Georgian"
+      },
+      {
+        "code": "gh",
+        "label": "English (Ghana)"
+      },
+      {
+        "code": "gn",
+        "label": "N'Ko (AZERTY)"
+      },
+      {
+        "code": "gr",
+        "label": "Greek"
+      },
+      {
+        "code": "hr",
+        "label": "Croatian"
+      },
+      {
+        "code": "hu",
+        "label": "Hungarian"
+      },
+      {
+        "code": "id",
+        "label": "Indonesian (Latin)"
+      },
+      {
+        "code": "ie",
+        "label": "Irish"
+      },
+      {
+        "code": "il",
+        "label": "Hebrew"
+      },
+      {
+        "code": "in",
+        "label": "Indian"
+      },
+      {
+        "code": "iq",
+        "label": "Arabic (Iraq)"
+      },
+      {
+        "code": "ir",
+        "label": "Persian"
+      },
+      {
+        "code": "is",
+        "label": "Icelandic"
+      },
+      {
+        "code": "it",
+        "label": "Italian"
+      },
+      {
+        "code": "jp",
+        "label": "Japanese"
+      },
+      {
+        "code": "ke",
+        "label": "Swahili (Kenya)"
+      },
+      {
+        "code": "kg",
+        "label": "Kyrgyz"
+      },
+      {
+        "code": "kh",
+        "label": "Khmer (Cambodia)"
+      },
+      {
+        "code": "kr",
+        "label": "Korean"
+      },
+      {
+        "code": "kz",
+        "label": "Kazakh"
+      },
+      {
+        "code": "la",
+        "label": "Lao"
+      },
+      {
+        "code": "latam",
+        "label": "Spanish (Latin American)"
+      },
+      {
+        "code": "lk",
+        "label": "Sinhala (phonetic)"
+      },
+      {
+        "code": "lt",
+        "label": "Lithuanian"
+      },
+      {
+        "code": "lv",
+        "label": "Latvian"
+      },
+      {
+        "code": "ma",
+        "label": "Arabic (Morocco)"
+      },
+      {
+        "code": "md",
+        "label": "Moldavian"
+      },
+      {
+        "code": "me",
+        "label": "Montenegrin"
+      },
+      {
+        "code": "mk",
+        "label": "Macedonian"
+      },
+      {
+        "code": "ml",
+        "label": "Bambara"
+      },
+      {
+        "code": "mm",
+        "label": "Burmese"
+      },
+      {
+        "code": "mn",
+        "label": "Mongolian"
+      },
+      {
+        "code": "mt",
+        "label": "Maltese"
+      },
+      {
+        "code": "mv",
+        "label": "Dhivehi"
+      },
+      {
+        "code": "my",
+        "label": "Malay (Jawi, Arabic Keyboard)"
+      },
+      {
+        "code": "ng",
+        "label": "English (Nigeria)"
+      },
+      {
+        "code": "nl",
+        "label": "Dutch"
+      },
+      {
+        "code": "no",
+        "label": "Norwegian"
+      },
+      {
+        "code": "np",
+        "label": "Nepali"
+      },
+      {
+        "code": "nz",
+        "label": "English (New Zealand)"
+      },
+      {
+        "code": "ph",
+        "label": "Filipino"
+      },
+      {
+        "code": "pk",
+        "label": "Urdu (Pakistan)"
+      },
+      {
+        "code": "pl",
+        "label": "Polish"
+      },
+      {
+        "code": "pt",
+        "label": "Portuguese"
+      },
+      {
+        "code": "ro",
+        "label": "Romanian"
+      },
+      {
+        "code": "rs",
+        "label": "Serbian"
+      },
+      {
+        "code": "ru",
+        "label": "Russian"
+      },
+      {
+        "code": "se",
+        "label": "Swedish"
+      },
+      {
+        "code": "si",
+        "label": "Slovenian"
+      },
+      {
+        "code": "sk",
+        "label": "Slovak"
+      },
+      {
+        "code": "sn",
+        "label": "Wolof"
+      },
+      {
+        "code": "sy",
+        "label": "Arabic (Syria)"
+      },
+      {
+        "code": "tg",
+        "label": "French (Togo)"
+      },
+      {
+        "code": "th",
+        "label": "Thai"
+      },
+      {
+        "code": "tj",
+        "label": "Tajik"
+      },
+      {
+        "code": "tm",
+        "label": "Turkmen"
+      },
+      {
+        "code": "tr",
+        "label": "Turkish"
+      },
+      {
+        "code": "tw",
+        "label": "Taiwanese"
+      },
+      {
+        "code": "tz",
+        "label": "Swahili (Tanzania)"
+      },
+      {
+        "code": "ua",
+        "label": "Ukrainian"
+      },
+      {
+        "code": "us",
+        "label": "English (US)"
+      },
+      {
+        "code": "uz",
+        "label": "Uzbek"
+      },
+      {
+        "code": "vn",
+        "label": "Vietnamese"
+      },
+      {
+        "code": "za",
+        "label": "English (South Africa)"
+      }
+    ]
+  },
+  {
+    "code": "key_kind",
+    "closed": false,
+    "values": [
+      {
+        "code": "ssh_host",
+        "label": "SSH host"
+      },
+      {
+        "code": "ssh_user",
+        "label": "SSH пользователя"
+      },
+      {
+        "code": "x509",
+        "label": "сертификат X.509"
+      },
+      {
+        "code": "wireguard",
+        "label": "WireGuard"
+      },
+      {
+        "code": "openvpn_static",
+        "label": "статический ключ OpenVPN"
+      },
+      {
+        "code": "radio_pairing",
+        "label": "ключ сопряжения радиолинка"
+      },
+      {
+        "code": "gpg",
+        "label": "GPG"
+      },
+      {
+        "code": "other",
+        "label": "иное"
+      }
+    ]
+  },
+  {
+    "code": "key_algo",
+    "closed": false,
+    "values": [
+      {
+        "code": "ed25519",
+        "label": "ed25519"
+      },
+      {
+        "code": "rsa",
+        "label": "rsa"
+      },
+      {
+        "code": "ecdsa_p256",
+        "label": "ecdsa-p256"
+      },
+      {
+        "code": "ecdsa_p384",
+        "label": "ecdsa-p384"
+      },
+      {
+        "code": "ecdsa_p521",
+        "label": "ecdsa-p521"
+      },
+      {
+        "code": "dsa",
+        "label": "dsa"
+      },
+      {
+        "code": "other",
+        "label": "иное"
+      }
+    ]
+  },
+  {
+    "code": "node_kind",
+    "closed": false,
+    "values": [
+      {
+        "code": "c2_server",
+        "label": "C2-сервер"
+      },
+      {
+        "code": "vpn_server",
+        "label": "VPN-сервер"
+      },
+      {
+        "code": "overlay_controller",
+        "label": "контроллер overlay-сети"
+      },
+      {
+        "code": "overlay_network",
+        "label": "сеть overlay"
+      },
+      {
+        "code": "overlay_node",
+        "label": "узел overlay"
+      },
+      {
+        "code": "video_server",
+        "label": "видеосервер"
+      },
+      {
+        "code": "code_repo",
+        "label": "репозиторий кода"
+      },
+      {
+        "code": "dns_server",
+        "label": "DNS-сервер"
+      },
+      {
+        "code": "web_service",
+        "label": "веб-сервис"
+      },
+      {
+        "code": "other",
+        "label": "иное"
+      }
+    ]
+  },
+  {
+    "code": "link_type",
+    "closed": false,
+    "values": [
+      {
+        "code": "wfb",
+        "label": "WFB"
+      },
+      {
+        "code": "manet",
+        "label": "MANET-радио"
+      },
+      {
+        "code": "rc_link",
+        "label": "RC-линк"
+      },
+      {
+        "code": "wifi",
+        "label": "Wi-Fi"
+      },
+      {
+        "code": "cellular",
+        "label": "сотовый модем"
+      },
+      {
+        "code": "satellite",
+        "label": "спутниковый"
+      },
+      {
+        "code": "other",
+        "label": "иное"
+      }
+    ]
+  },
+  {
+    "code": "radio_band",
+    "closed": false,
+    "values": [
+      {
+        "code": "mhz_433",
+        "label": "433 МГц"
+      },
+      {
+        "code": "mhz_868",
+        "label": "868 МГц"
+      },
+      {
+        "code": "mhz_900_928",
+        "label": "900–928 МГц"
+      },
+      {
+        "code": "ghz_1_2_1_3",
+        "label": "1,2–1,3 ГГц"
+      },
+      {
+        "code": "l_band",
+        "label": "L-диапазон (спутниковый)"
+      },
+      {
+        "code": "ghz_2_4",
+        "label": "2,4 ГГц"
+      },
+      {
+        "code": "ghz_3_3_3_8",
+        "label": "3,3–3,8 ГГц"
+      },
+      {
+        "code": "ghz_5_1_5_9",
+        "label": "5,1–5,9 ГГц"
+      },
+      {
+        "code": "cellular",
+        "label": "сотовый"
+      },
+      {
+        "code": "ku_ka",
+        "label": "Ku/Ka"
+      },
+      {
+        "code": "other",
+        "label": "иное"
+      }
+    ]
+  },
+  {
+    "code": "proto",
+    "closed": false,
+    "values": [
+      {
+        "code": "mavlink",
+        "label": "MAVLink"
+      },
+      {
+        "code": "crsf",
+        "label": "CRSF"
+      },
+      {
+        "code": "expresslrs",
+        "label": "ExpressLRS"
+      },
+      {
+        "code": "sbus",
+        "label": "SBUS"
+      },
+      {
+        "code": "wfb_ng",
+        "label": "WFB-ng"
+      },
+      {
+        "code": "rtsp",
+        "label": "RTSP"
+      },
+      {
+        "code": "rtp",
+        "label": "RTP"
+      },
+      {
+        "code": "srt",
+        "label": "SRT"
+      },
+      {
+        "code": "webrtc",
+        "label": "WebRTC"
+      },
+      {
+        "code": "http",
+        "label": "HTTP"
+      },
+      {
+        "code": "https",
+        "label": "HTTPS"
+      },
+      {
+        "code": "mqtt",
+        "label": "MQTT"
+      },
+      {
+        "code": "websocket",
+        "label": "WebSocket"
+      },
+      {
+        "code": "ssh",
+        "label": "SSH"
+      },
+      {
+        "code": "openvpn",
+        "label": "OpenVPN"
+      },
+      {
+        "code": "wireguard",
+        "label": "WireGuard"
+      },
+      {
+        "code": "zerotier",
+        "label": "ZeroTier"
+      },
+      {
+        "code": "tailscale",
+        "label": "Tailscale"
+      },
+      {
+        "code": "ipsec",
+        "label": "IPsec"
+      },
+      {
+        "code": "other",
+        "label": "иное"
+      }
+    ]
+  },
+  {
+    "code": "country",
+    "closed": false,
+    "values": [
+      {
+        "code": "00",
+        "label": "00"
+      },
+      {
+        "code": "AD",
+        "label": "Andorra"
+      },
+      {
+        "code": "AE",
+        "label": "United Arab Emirates"
+      },
+      {
+        "code": "AF",
+        "label": "Afghanistan"
+      },
+      {
+        "code": "AG",
+        "label": "Antigua & Barbuda"
+      },
+      {
+        "code": "AI",
+        "label": "Anguilla"
+      },
+      {
+        "code": "AL",
+        "label": "Albania"
+      },
+      {
+        "code": "AM",
+        "label": "Armenia"
+      },
+      {
+        "code": "AO",
+        "label": "Angola"
+      },
+      {
+        "code": "AQ",
+        "label": "Antarctica"
+      },
+      {
+        "code": "AR",
+        "label": "Argentina"
+      },
+      {
+        "code": "AS",
+        "label": "Samoa (American)"
+      },
+      {
+        "code": "AT",
+        "label": "Austria"
+      },
+      {
+        "code": "AU",
+        "label": "Australia"
+      },
+      {
+        "code": "AW",
+        "label": "Aruba"
+      },
+      {
+        "code": "AX",
+        "label": "Åland Islands"
+      },
+      {
+        "code": "AZ",
+        "label": "Azerbaijan"
+      },
+      {
+        "code": "BA",
+        "label": "Bosnia & Herzegovina"
+      },
+      {
+        "code": "BB",
+        "label": "Barbados"
+      },
+      {
+        "code": "BD",
+        "label": "Bangladesh"
+      },
+      {
+        "code": "BE",
+        "label": "Belgium"
+      },
+      {
+        "code": "BF",
+        "label": "Burkina Faso"
+      },
+      {
+        "code": "BG",
+        "label": "Bulgaria"
+      },
+      {
+        "code": "BH",
+        "label": "Bahrain"
+      },
+      {
+        "code": "BI",
+        "label": "Burundi"
+      },
+      {
+        "code": "BJ",
+        "label": "Benin"
+      },
+      {
+        "code": "BL",
+        "label": "St Barthelemy"
+      },
+      {
+        "code": "BM",
+        "label": "Bermuda"
+      },
+      {
+        "code": "BN",
+        "label": "Brunei"
+      },
+      {
+        "code": "BO",
+        "label": "Bolivia"
+      },
+      {
+        "code": "BQ",
+        "label": "Caribbean NL"
+      },
+      {
+        "code": "BR",
+        "label": "Brazil"
+      },
+      {
+        "code": "BS",
+        "label": "Bahamas"
+      },
+      {
+        "code": "BT",
+        "label": "Bhutan"
+      },
+      {
+        "code": "BV",
+        "label": "Bouvet Island"
+      },
+      {
+        "code": "BW",
+        "label": "Botswana"
+      },
+      {
+        "code": "BY",
+        "label": "Belarus"
+      },
+      {
+        "code": "BZ",
+        "label": "Belize"
+      },
+      {
+        "code": "CA",
+        "label": "Canada"
+      },
+      {
+        "code": "CC",
+        "label": "Cocos (Keeling) Islands"
+      },
+      {
+        "code": "CD",
+        "label": "Congo (Dem. Rep.)"
+      },
+      {
+        "code": "CF",
+        "label": "Central African Rep."
+      },
+      {
+        "code": "CG",
+        "label": "Congo (Rep.)"
+      },
+      {
+        "code": "CH",
+        "label": "Switzerland"
+      },
+      {
+        "code": "CI",
+        "label": "Côte d’Ivoire"
+      },
+      {
+        "code": "CK",
+        "label": "Cook Islands"
+      },
+      {
+        "code": "CL",
+        "label": "Chile"
+      },
+      {
+        "code": "CM",
+        "label": "Cameroon"
+      },
+      {
+        "code": "CN",
+        "label": "China"
+      },
+      {
+        "code": "CO",
+        "label": "Colombia"
+      },
+      {
+        "code": "CR",
+        "label": "Costa Rica"
+      },
+      {
+        "code": "CU",
+        "label": "Cuba"
+      },
+      {
+        "code": "CV",
+        "label": "Cape Verde"
+      },
+      {
+        "code": "CW",
+        "label": "Curaçao"
+      },
+      {
+        "code": "CX",
+        "label": "Christmas Island"
+      },
+      {
+        "code": "CY",
+        "label": "Cyprus"
+      },
+      {
+        "code": "CZ",
+        "label": "Czech Republic"
+      },
+      {
+        "code": "DE",
+        "label": "Germany"
+      },
+      {
+        "code": "DJ",
+        "label": "Djibouti"
+      },
+      {
+        "code": "DK",
+        "label": "Denmark"
+      },
+      {
+        "code": "DM",
+        "label": "Dominica"
+      },
+      {
+        "code": "DO",
+        "label": "Dominican Republic"
+      },
+      {
+        "code": "DZ",
+        "label": "Algeria"
+      },
+      {
+        "code": "EC",
+        "label": "Ecuador"
+      },
+      {
+        "code": "EE",
+        "label": "Estonia"
+      },
+      {
+        "code": "EG",
+        "label": "Egypt"
+      },
+      {
+        "code": "EH",
+        "label": "Western Sahara"
+      },
+      {
+        "code": "ER",
+        "label": "Eritrea"
+      },
+      {
+        "code": "ES",
+        "label": "Spain"
+      },
+      {
+        "code": "ET",
+        "label": "Ethiopia"
+      },
+      {
+        "code": "FI",
+        "label": "Finland"
+      },
+      {
+        "code": "FJ",
+        "label": "Fiji"
+      },
+      {
+        "code": "FK",
+        "label": "Falkland Islands"
+      },
+      {
+        "code": "FM",
+        "label": "Micronesia"
+      },
+      {
+        "code": "FO",
+        "label": "Faroe Islands"
+      },
+      {
+        "code": "FR",
+        "label": "France"
+      },
+      {
+        "code": "GA",
+        "label": "Gabon"
+      },
+      {
+        "code": "GB",
+        "label": "Britain (UK)"
+      },
+      {
+        "code": "GD",
+        "label": "Grenada"
+      },
+      {
+        "code": "GE",
+        "label": "Georgia"
+      },
+      {
+        "code": "GF",
+        "label": "French Guiana"
+      },
+      {
+        "code": "GG",
+        "label": "Guernsey"
+      },
+      {
+        "code": "GH",
+        "label": "Ghana"
+      },
+      {
+        "code": "GI",
+        "label": "Gibraltar"
+      },
+      {
+        "code": "GL",
+        "label": "Greenland"
+      },
+      {
+        "code": "GM",
+        "label": "Gambia"
+      },
+      {
+        "code": "GN",
+        "label": "Guinea"
+      },
+      {
+        "code": "GP",
+        "label": "Guadeloupe"
+      },
+      {
+        "code": "GQ",
+        "label": "Equatorial Guinea"
+      },
+      {
+        "code": "GR",
+        "label": "Greece"
+      },
+      {
+        "code": "GS",
+        "label": "South Georgia & the South Sandwich Islands"
+      },
+      {
+        "code": "GT",
+        "label": "Guatemala"
+      },
+      {
+        "code": "GU",
+        "label": "Guam"
+      },
+      {
+        "code": "GW",
+        "label": "Guinea-Bissau"
+      },
+      {
+        "code": "GY",
+        "label": "Guyana"
+      },
+      {
+        "code": "HK",
+        "label": "Hong Kong"
+      },
+      {
+        "code": "HM",
+        "label": "Heard Island & McDonald Islands"
+      },
+      {
+        "code": "HN",
+        "label": "Honduras"
+      },
+      {
+        "code": "HR",
+        "label": "Croatia"
+      },
+      {
+        "code": "HT",
+        "label": "Haiti"
+      },
+      {
+        "code": "HU",
+        "label": "Hungary"
+      },
+      {
+        "code": "ID",
+        "label": "Indonesia"
+      },
+      {
+        "code": "IE",
+        "label": "Ireland"
+      },
+      {
+        "code": "IL",
+        "label": "Israel"
+      },
+      {
+        "code": "IM",
+        "label": "Isle of Man"
+      },
+      {
+        "code": "IN",
+        "label": "India"
+      },
+      {
+        "code": "IO",
+        "label": "British Indian Ocean Territory"
+      },
+      {
+        "code": "IQ",
+        "label": "Iraq"
+      },
+      {
+        "code": "IR",
+        "label": "Iran"
+      },
+      {
+        "code": "IS",
+        "label": "Iceland"
+      },
+      {
+        "code": "IT",
+        "label": "Italy"
+      },
+      {
+        "code": "JE",
+        "label": "Jersey"
+      },
+      {
+        "code": "JM",
+        "label": "Jamaica"
+      },
+      {
+        "code": "JO",
+        "label": "Jordan"
+      },
+      {
+        "code": "JP",
+        "label": "Japan"
+      },
+      {
+        "code": "KE",
+        "label": "Kenya"
+      },
+      {
+        "code": "KG",
+        "label": "Kyrgyzstan"
+      },
+      {
+        "code": "KH",
+        "label": "Cambodia"
+      },
+      {
+        "code": "KI",
+        "label": "Kiribati"
+      },
+      {
+        "code": "KM",
+        "label": "Comoros"
+      },
+      {
+        "code": "KN",
+        "label": "St Kitts & Nevis"
+      },
+      {
+        "code": "KP",
+        "label": "Korea (North)"
+      },
+      {
+        "code": "KR",
+        "label": "Korea (South)"
+      },
+      {
+        "code": "KW",
+        "label": "Kuwait"
+      },
+      {
+        "code": "KY",
+        "label": "Cayman Islands"
+      },
+      {
+        "code": "KZ",
+        "label": "Kazakhstan"
+      },
+      {
+        "code": "LA",
+        "label": "Laos"
+      },
+      {
+        "code": "LB",
+        "label": "Lebanon"
+      },
+      {
+        "code": "LC",
+        "label": "St Lucia"
+      },
+      {
+        "code": "LI",
+        "label": "Liechtenstein"
+      },
+      {
+        "code": "LK",
+        "label": "Sri Lanka"
+      },
+      {
+        "code": "LR",
+        "label": "Liberia"
+      },
+      {
+        "code": "LS",
+        "label": "Lesotho"
+      },
+      {
+        "code": "LT",
+        "label": "Lithuania"
+      },
+      {
+        "code": "LU",
+        "label": "Luxembourg"
+      },
+      {
+        "code": "LV",
+        "label": "Latvia"
+      },
+      {
+        "code": "LY",
+        "label": "Libya"
+      },
+      {
+        "code": "MA",
+        "label": "Morocco"
+      },
+      {
+        "code": "MC",
+        "label": "Monaco"
+      },
+      {
+        "code": "MD",
+        "label": "Moldova"
+      },
+      {
+        "code": "ME",
+        "label": "Montenegro"
+      },
+      {
+        "code": "MF",
+        "label": "St Martin (French)"
+      },
+      {
+        "code": "MG",
+        "label": "Madagascar"
+      },
+      {
+        "code": "MH",
+        "label": "Marshall Islands"
+      },
+      {
+        "code": "MK",
+        "label": "North Macedonia"
+      },
+      {
+        "code": "ML",
+        "label": "Mali"
+      },
+      {
+        "code": "MM",
+        "label": "Myanmar (Burma)"
+      },
+      {
+        "code": "MN",
+        "label": "Mongolia"
+      },
+      {
+        "code": "MO",
+        "label": "Macau"
+      },
+      {
+        "code": "MP",
+        "label": "Northern Mariana Islands"
+      },
+      {
+        "code": "MQ",
+        "label": "Martinique"
+      },
+      {
+        "code": "MR",
+        "label": "Mauritania"
+      },
+      {
+        "code": "MS",
+        "label": "Montserrat"
+      },
+      {
+        "code": "MT",
+        "label": "Malta"
+      },
+      {
+        "code": "MU",
+        "label": "Mauritius"
+      },
+      {
+        "code": "MV",
+        "label": "Maldives"
+      },
+      {
+        "code": "MW",
+        "label": "Malawi"
+      },
+      {
+        "code": "MX",
+        "label": "Mexico"
+      },
+      {
+        "code": "MY",
+        "label": "Malaysia"
+      },
+      {
+        "code": "MZ",
+        "label": "Mozambique"
+      },
+      {
+        "code": "NA",
+        "label": "Namibia"
+      },
+      {
+        "code": "NC",
+        "label": "New Caledonia"
+      },
+      {
+        "code": "NE",
+        "label": "Niger"
+      },
+      {
+        "code": "NF",
+        "label": "Norfolk Island"
+      },
+      {
+        "code": "NG",
+        "label": "Nigeria"
+      },
+      {
+        "code": "NI",
+        "label": "Nicaragua"
+      },
+      {
+        "code": "NL",
+        "label": "Netherlands"
+      },
+      {
+        "code": "NO",
+        "label": "Norway"
+      },
+      {
+        "code": "NP",
+        "label": "Nepal"
+      },
+      {
+        "code": "NR",
+        "label": "Nauru"
+      },
+      {
+        "code": "NU",
+        "label": "Niue"
+      },
+      {
+        "code": "NZ",
+        "label": "New Zealand"
+      },
+      {
+        "code": "OM",
+        "label": "Oman"
+      },
+      {
+        "code": "PA",
+        "label": "Panama"
+      },
+      {
+        "code": "PE",
+        "label": "Peru"
+      },
+      {
+        "code": "PF",
+        "label": "French Polynesia"
+      },
+      {
+        "code": "PG",
+        "label": "Papua New Guinea"
+      },
+      {
+        "code": "PH",
+        "label": "Philippines"
+      },
+      {
+        "code": "PK",
+        "label": "Pakistan"
+      },
+      {
+        "code": "PL",
+        "label": "Poland"
+      },
+      {
+        "code": "PM",
+        "label": "St Pierre & Miquelon"
+      },
+      {
+        "code": "PN",
+        "label": "Pitcairn"
+      },
+      {
+        "code": "PR",
+        "label": "Puerto Rico"
+      },
+      {
+        "code": "PS",
+        "label": "Palestine"
+      },
+      {
+        "code": "PT",
+        "label": "Portugal"
+      },
+      {
+        "code": "PW",
+        "label": "Palau"
+      },
+      {
+        "code": "PY",
+        "label": "Paraguay"
+      },
+      {
+        "code": "QA",
+        "label": "Qatar"
+      },
+      {
+        "code": "RE",
+        "label": "Réunion"
+      },
+      {
+        "code": "RO",
+        "label": "Romania"
+      },
+      {
+        "code": "RS",
+        "label": "Serbia"
+      },
+      {
+        "code": "RU",
+        "label": "Russia"
+      },
+      {
+        "code": "RW",
+        "label": "Rwanda"
+      },
+      {
+        "code": "SA",
+        "label": "Saudi Arabia"
+      },
+      {
+        "code": "SB",
+        "label": "Solomon Islands"
+      },
+      {
+        "code": "SC",
+        "label": "Seychelles"
+      },
+      {
+        "code": "SD",
+        "label": "Sudan"
+      },
+      {
+        "code": "SE",
+        "label": "Sweden"
+      },
+      {
+        "code": "SG",
+        "label": "Singapore"
+      },
+      {
+        "code": "SH",
+        "label": "St Helena"
+      },
+      {
+        "code": "SI",
+        "label": "Slovenia"
+      },
+      {
+        "code": "SJ",
+        "label": "Svalbard & Jan Mayen"
+      },
+      {
+        "code": "SK",
+        "label": "Slovakia"
+      },
+      {
+        "code": "SL",
+        "label": "Sierra Leone"
+      },
+      {
+        "code": "SM",
+        "label": "San Marino"
+      },
+      {
+        "code": "SN",
+        "label": "Senegal"
+      },
+      {
+        "code": "SO",
+        "label": "Somalia"
+      },
+      {
+        "code": "SR",
+        "label": "Suriname"
+      },
+      {
+        "code": "SS",
+        "label": "South Sudan"
+      },
+      {
+        "code": "ST",
+        "label": "Sao Tome & Principe"
+      },
+      {
+        "code": "SV",
+        "label": "El Salvador"
+      },
+      {
+        "code": "SX",
+        "label": "St Maarten (Dutch)"
+      },
+      {
+        "code": "SY",
+        "label": "Syria"
+      },
+      {
+        "code": "SZ",
+        "label": "Eswatini (Swaziland)"
+      },
+      {
+        "code": "TC",
+        "label": "Turks & Caicos Is"
+      },
+      {
+        "code": "TD",
+        "label": "Chad"
+      },
+      {
+        "code": "TF",
+        "label": "French S. Terr."
+      },
+      {
+        "code": "TG",
+        "label": "Togo"
+      },
+      {
+        "code": "TH",
+        "label": "Thailand"
+      },
+      {
+        "code": "TJ",
+        "label": "Tajikistan"
+      },
+      {
+        "code": "TK",
+        "label": "Tokelau"
+      },
+      {
+        "code": "TL",
+        "label": "East Timor"
+      },
+      {
+        "code": "TM",
+        "label": "Turkmenistan"
+      },
+      {
+        "code": "TN",
+        "label": "Tunisia"
+      },
+      {
+        "code": "TO",
+        "label": "Tonga"
+      },
+      {
+        "code": "TR",
+        "label": "Turkey"
+      },
+      {
+        "code": "TT",
+        "label": "Trinidad & Tobago"
+      },
+      {
+        "code": "TV",
+        "label": "Tuvalu"
+      },
+      {
+        "code": "TW",
+        "label": "Taiwan"
+      },
+      {
+        "code": "TZ",
+        "label": "Tanzania"
+      },
+      {
+        "code": "UA",
+        "label": "Ukraine"
+      },
+      {
+        "code": "UG",
+        "label": "Uganda"
+      },
+      {
+        "code": "UM",
+        "label": "US minor outlying islands"
+      },
+      {
+        "code": "US",
+        "label": "United States"
+      },
+      {
+        "code": "UY",
+        "label": "Uruguay"
+      },
+      {
+        "code": "UZ",
+        "label": "Uzbekistan"
+      },
+      {
+        "code": "VA",
+        "label": "Vatican City"
+      },
+      {
+        "code": "VC",
+        "label": "St Vincent"
+      },
+      {
+        "code": "VE",
+        "label": "Venezuela"
+      },
+      {
+        "code": "VG",
+        "label": "Virgin Islands (UK)"
+      },
+      {
+        "code": "VI",
+        "label": "Virgin Islands (US)"
+      },
+      {
+        "code": "VN",
+        "label": "Vietnam"
+      },
+      {
+        "code": "VU",
+        "label": "Vanuatu"
+      },
+      {
+        "code": "WF",
+        "label": "Wallis & Futuna"
+      },
+      {
+        "code": "WS",
+        "label": "Samoa (western)"
+      },
+      {
+        "code": "YE",
+        "label": "Yemen"
+      },
+      {
+        "code": "YT",
+        "label": "Mayotte"
+      },
+      {
+        "code": "ZA",
+        "label": "South Africa"
+      },
+      {
+        "code": "ZM",
+        "label": "Zambia"
+      },
+      {
+        "code": "ZW",
+        "label": "Zimbabwe"
+      }
+    ]
+  },
+  {
+    "code": "video_codec",
+    "closed": false,
+    "values": [
+      {
+        "code": "h264",
+        "label": "H.264"
+      },
+      {
+        "code": "h265",
+        "label": "H.265"
+      },
+      {
+        "code": "mjpeg",
+        "label": "MJPEG"
+      },
+      {
+        "code": "analog",
+        "label": "аналоговое видео"
+      },
+      {
+        "code": "other",
+        "label": "иное"
+      }
+    ]
+  },
+  {
+    "code": "software_kind",
+    "closed": false,
+    "values": [
+      {
+        "code": "systemd_service",
+        "label": "служба systemd"
+      },
+      {
+        "code": "container",
+        "label": "контейнер"
+      },
+      {
+        "code": "executable",
+        "label": "исполняемый файл"
+      },
+      {
+        "code": "package",
+        "label": "пакет"
+      },
+      {
+        "code": "firmware",
+        "label": "прошивка"
+      },
+      {
+        "code": "lua_script",
+        "label": "скрипт Lua"
+      },
+      {
+        "code": "android_app",
+        "label": "приложение Android"
+      },
+      {
+        "code": "ground_station",
+        "label": "наземная станция"
+      },
+      {
+        "code": "library",
+        "label": "библиотека"
+      },
+      {
+        "code": "other",
+        "label": "иное"
+      }
+    ]
+  },
+  {
+    "code": "autopilot_stack",
+    "closed": false,
+    "values": [
+      {
+        "code": "ardupilot",
+        "label": "ArduPilot"
+      },
+      {
+        "code": "px4",
+        "label": "PX4"
+      },
+      {
+        "code": "inav",
+        "label": "INAV"
+      },
+      {
+        "code": "betaflight",
+        "label": "Betaflight"
+      },
+      {
+        "code": "other",
+        "label": "иное"
+      }
+    ]
+  },
+  {
+    "code": "vehicle_type",
+    "closed": false,
+    "values": [
+      {
+        "code": "copter",
+        "label": "Copter"
+      },
+      {
+        "code": "plane",
+        "label": "Plane"
+      },
+      {
+        "code": "quadplane",
+        "label": "QuadPlane (VTOL)"
+      },
+      {
+        "code": "rover",
+        "label": "Rover"
+      },
+      {
+        "code": "heli",
+        "label": "Heli"
+      },
+      {
+        "code": "other",
+        "label": "иное"
+      }
+    ]
+  },
+  {
+    "code": "failsafe_action",
+    "closed": false,
+    "values": [
+      {
+        "code": "rtl",
+        "label": "RTL"
+      },
+      {
+        "code": "smart_rtl",
+        "label": "SmartRTL"
+      },
+      {
+        "code": "land",
+        "label": "Land"
+      },
+      {
+        "code": "brake",
+        "label": "Brake"
+      },
+      {
+        "code": "loiter",
+        "label": "Loiter"
+      },
+      {
+        "code": "continue",
+        "label": "Continue"
+      },
+      {
+        "code": "terminate",
+        "label": "Terminate"
+      },
+      {
+        "code": "other",
+        "label": "иное"
+      }
+    ]
+  },
+  {
+    "code": "crypto_scheme",
+    "closed": false,
+    "values": [
+      {
+        "code": "luks2",
+        "label": "LUKS2"
+      },
+      {
+        "code": "luks1",
+        "label": "LUKS1"
+      },
+      {
+        "code": "plain_dm_crypt",
+        "label": "dm-crypt без заголовка"
+      },
+      {
+        "code": "fscrypt",
+        "label": "fscrypt"
+      },
+      {
+        "code": "ecryptfs",
+        "label": "eCryptfs"
+      },
+      {
+        "code": "veracrypt",
+        "label": "VeraCrypt"
+      },
+      {
+        "code": "per_file",
+        "label": "шифрование отдельных файлов"
+      },
+      {
+        "code": "none",
+        "label": "нет"
+      },
+      {
+        "code": "other",
+        "label": "иное"
+      }
+    ]
+  },
+  {
+    "code": "key_binding",
+    "closed": false,
+    "values": [
+      {
+        "code": "password",
+        "label": "пароль"
+      },
+      {
+        "code": "key_file",
+        "label": "файл-ключ"
+      },
+      {
+        "code": "otp_rfid_token",
+        "label": "OTP- или RFID-токен"
+      },
+      {
+        "code": "soc_fuses",
+        "label": "аппаратный ключ SoC (OTP-фьюзы)"
+      },
+      {
+        "code": "tpm",
+        "label": "TPM"
+      },
+      {
+        "code": "network_unlock",
+        "label": "сетевая разблокировка"
+      },
+      {
+        "code": "other",
+        "label": "иное"
+      }
+    ]
+  },
+  {
+    "code": "geo_kind",
+    "closed": false,
+    "values": [
+      {
+        "code": "terrain_tile",
+        "label": "тайл рельефа"
+      },
+      {
+        "code": "seizure_area",
+        "label": "район изъятия"
+      },
+      {
+        "code": "operation_area",
+        "label": "район применения"
+      },
+      {
+        "code": "flight_track",
+        "label": "трек полёта"
+      },
+      {
+        "code": "other",
+        "label": "иное"
+      }
+    ]
+  },
+  {
+    "code": "geo_precision",
+    "closed": false,
+    "values": [
+      {
+        "code": "point",
+        "label": "точка"
+      },
+      {
+        "code": "km_1",
+        "label": "до 1 км"
+      },
+      {
+        "code": "km_10",
+        "label": "до 10 км"
+      },
+      {
+        "code": "district",
+        "label": "район"
+      },
+      {
+        "code": "region",
+        "label": "область"
+      }
+    ]
+  },
+  {
+    "code": "artifact_kind",
+    "closed": false,
+    "values": [
+      {
+        "code": "executable",
+        "label": "исполняемый файл"
+      },
+      {
+        "code": "script",
+        "label": "скрипт"
+      },
+      {
+        "code": "config",
+        "label": "конфигурация"
+      },
+      {
+        "code": "log",
+        "label": "журнал"
+      },
+      {
+        "code": "database",
+        "label": "база данных"
+      },
+      {
+        "code": "archive_or_image",
+        "label": "архив или образ"
+      },
+      {
+        "code": "document",
+        "label": "документ"
+      },
+      {
+        "code": "other",
+        "label": "иное"
+      }
+    ]
+  },
+  {
+    "code": "event_kind",
+    "closed": false,
+    "values": [
+      {
+        "code": "media_mount",
+        "label": "монтирование носителя"
+      },
+      {
+        "code": "login",
+        "label": "вход в систему"
+      },
+      {
+        "code": "file_change",
+        "label": "изменение файла"
+      },
+      {
+        "code": "boot",
+        "label": "загрузка системы"
+      },
+      {
+        "code": "flight",
+        "label": "полёт"
+      },
+      {
+        "code": "domain_registered",
+        "label": "регистрация домена"
+      },
+      {
+        "code": "domain_changed",
+        "label": "изменение домена"
+      },
+      {
+        "code": "other",
+        "label": "иное"
+      }
+    ]
+  },
+  {
+    "code": "time_source",
+    "closed": false,
+    "values": [
+      {
+        "code": "device_clock",
+        "label": "часы устройства"
+      },
+      {
+        "code": "gps",
+        "label": "GPS"
+      },
+      {
+        "code": "external_registry",
+        "label": "внешний реестр"
+      },
+      {
+        "code": "manual",
+        "label": "ручной ввод"
+      },
+      {
+        "code": "other",
+        "label": "иное"
+      }
+    ]
+  }
+]

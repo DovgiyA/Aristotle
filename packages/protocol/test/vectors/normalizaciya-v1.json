@@ -1,0 +1,271 @@
+{
+ "unicode": "17.0",
+ "source": "specs/005-model-dannyh-i-slovar/contracts/normalizaciya-v1.md",
+ "vectors": [
+  {
+   "class": "строка",
+   "input": "  x y  ",
+   "output": "x y"
+  },
+  {
+   "class": "строка",
+   "input": "é",
+   "output": "é"
+  },
+  {
+   "class": "строка-без-регистра",
+   "input": "  Straße   X  ",
+   "output": "strasse x"
+  },
+  {
+   "class": "строка-без-регистра",
+   "input": "ΣΑΣ",
+   "output": "σασ"
+  },
+  {
+   "class": "строка-без-регистра",
+   "input": "ﬁ",
+   "output": "fi"
+  },
+  {
+   "class": "строка-без-регистра",
+   "input": "x­y",
+   "output": "xy"
+  },
+  {
+   "class": "имя-хоста",
+   "input": "Host-1.Example.test",
+   "output": "host-1"
+  },
+  {
+   "class": "имя-хоста",
+   "input": "x",
+   "output": "x"
+  },
+  {
+   "class": "имя-хоста",
+   "input": "хост",
+   "output": null
+  },
+  {
+   "class": "домен",
+   "input": "Пример.РФ.",
+   "output": "xn--e1afmkfd.xn--p1ai"
+  },
+  {
+   "class": "домен",
+   "input": "EXAMPLE.test",
+   "output": "example.test"
+  },
+  {
+   "class": "hex",
+   "input": "0xAB:CD-ef",
+   "output": "abcdef"
+  },
+  {
+   "class": "hex",
+   "input": "0xZZ",
+   "output": null
+  },
+  {
+   "class": "guid",
+   "input": "{0A1B2C3D-4E5F-6A7B-8C9D-0E1F2A3B4C5D}",
+   "output": "0a1b2c3d-4e5f-6a7b-8c9d-0e1f2a3b4c5d"
+  },
+  {
+   "class": "guid",
+   "input": "0A1B2C3D4E5F6A7B8C9D0E1F2A3B4C5D",
+   "output": null
+  },
+  {
+   "class": "ip",
+   "input": "192.0.2.1",
+   "output": "192.0.2.1"
+  },
+  {
+   "class": "ip",
+   "input": "192.0.02.1",
+   "output": "192.0.2.1"
+  },
+  {
+   "class": "ip",
+   "input": "010.001.002.003",
+   "output": "10.1.2.3"
+  },
+  {
+   "class": "ip",
+   "input": "192.0.2.256",
+   "output": null
+  },
+  {
+   "class": "ip",
+   "input": "2001:DB8:0:0:0:0:0:1",
+   "output": "2001:db8::1"
+  },
+  {
+   "class": "ip",
+   "input": "2001:db8:0:0:1:0:0:1",
+   "output": "2001:db8::1:0:0:1"
+  },
+  {
+   "class": "ip",
+   "input": "2001:db8:0:1:1:1:1:1",
+   "output": "2001:db8:0:1:1:1:1:1"
+  },
+  {
+   "class": "ip",
+   "input": "::FFFF:192.0.2.1",
+   "output": "::ffff:192.0.2.1"
+  },
+  {
+   "class": "ssh-ключ",
+   "input": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEB x@y",
+   "output": "RXm/ruZ0eTzRXKwi1AQEDynB0VgHQ2ac9KPSFdf/YnA"
+  },
+  {
+   "class": "ssh-ключ",
+   "input": "SHA256:RXm/ruZ0eTzRXKwi1AQEDynB0VgHQ2ac9KPSFdf/YnA",
+   "output": "RXm/ruZ0eTzRXKwi1AQEDynB0VgHQ2ac9KPSFdf/YnA"
+  },
+  {
+   "class": "ssh-ключ",
+   "input": "ssh-ed25519 !!!",
+   "output": null
+  },
+  {
+   "class": "серийный",
+   "input": " ab 12-c ",
+   "output": "AB12-C"
+  },
+  {
+   "class": "серийный",
+   "input": "ＡＢ１",
+   "output": "AB1"
+  },
+  {
+   "class": "целое",
+   "input": "0123",
+   "output": "123"
+  },
+  {
+   "class": "целое",
+   "input": "1 000",
+   "output": "1000"
+  },
+  {
+   "class": "целое",
+   "input": "1_000",
+   "output": "1000"
+  },
+  {
+   "class": "целое",
+   "input": "1 000",
+   "output": "1000"
+  },
+  {
+   "class": "целое",
+   "input": "1 000",
+   "output": "1000"
+  },
+  {
+   "class": "целое",
+   "input": "1.000",
+   "output": null
+  },
+  {
+   "class": "целое",
+   "input": "1,000",
+   "output": null
+  },
+  {
+   "class": "целое",
+   "input": "1'000",
+   "output": null
+  },
+  {
+   "class": "целое",
+   "input": "0",
+   "output": "0"
+  },
+  {
+   "class": "целое",
+   "input": "-5",
+   "output": null
+  },
+  {
+   "class": "домен",
+   "input": "example.test..",
+   "output": null
+  },
+  {
+   "class": "ip",
+   "input": "::1.2.3.4",
+   "output": "::102:304"
+  },
+  {
+   "class": "ip",
+   "input": "1.2.3.4::",
+   "output": null
+  },
+  {
+   "class": "ip",
+   "input": "1.2.3.4::1",
+   "output": null
+  },
+  {
+   "class": "домен",
+   "input": "example.test/login?x=1",
+   "output": null
+  },
+  {
+   "class": "домен",
+   "input": "EX%41MPLE.test#a",
+   "output": null
+  },
+  {
+   "class": "домен",
+   "input": "example.test\\x",
+   "output": null
+  },
+  {
+   "class": "домен",
+   "input": "0x7f.1",
+   "output": null
+  },
+  {
+   "class": "домен",
+   "input": "127.1",
+   "output": null
+  },
+  {
+   "class": "домен",
+   "input": "1.2.3",
+   "output": null
+  },
+  {
+   "class": "домен",
+   "input": "xn--e1afmkfd.xn--p1ai",
+   "output": "xn--e1afmkfd.xn--p1ai"
+  },
+  {
+   "class": "домен",
+   "input": "127。1",
+   "output": null
+  },
+  {
+   "class": "домен",
+   "input": "127.１",
+   "output": null
+  },
+  {
+   "class": "домен",
+   "input": "1.2.3。",
+   "output": null
+  },
+  {
+   "class": "домен",
+   "input": "127．0．0．1",
+   "output": null
+  }
+ ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "@aristotel/relay",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@aristotel/core": "0.1.0",
+    "@aristotel/protocol": "0.1.0",
+    "fastify": "^5.0.0"
+  }
+}

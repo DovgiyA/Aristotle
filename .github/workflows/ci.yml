@@ -1,0 +1,25 @@
+# Проверка на поддерживаемых платформах (APP-03, APP-21) и линиях Node (research R1 фичи 001);
+# интерфейс собирается до тестов: его файлы отдаёт локальная часть Станции (T002 фичи 004).
+name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        node: ["24.16", "26"]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run build:ui
+      - run: npm test
